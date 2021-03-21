@@ -1,0 +1,10 @@
+{
+  "language": "en",
+  "links": {
+    "home": "Home",
+    "aboutUs": "About us",
+    "project": "Project",
+    "device": "Device",
+    "contact": "Contact"
+  }
+}

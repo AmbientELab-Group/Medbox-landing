@@ -2,13 +2,17 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/montserrat";
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
     font-family: 'Montserrat';
     height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
   }
 `;
 

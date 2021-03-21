@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import scrollTo from "gatsby-plugin-smoothscroll";
+import { graphql } from "gatsby";
+import useLanguage from "../hooks/useLanguage";
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -14,14 +15,21 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-around;
   color: black;
+
+  a {
+  }
 `;
 
 const Header = () => {
+  const [language] = useLanguage();
+
   return (
     <HeaderContainer>
-      <button onClick={() => scrollTo("#home")}>Home</button>
-      <button onClick={() => scrollTo("#about")}>About</button>
-      <button onClick={() => scrollTo("#project")}>Project</button>
+      {/* {Object.entries(data.translationsJson.links).map(([name, text]) => (
+        <a key={name} href={`#${name}`}>
+          {text}
+        </a>
+      ))} */}
     </HeaderContainer>
   );
 };
