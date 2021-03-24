@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { graphql } from "gatsby";
-import useLanguage from "../hooks/useLanguage";
+
+import { useTranslation } from "react-i18next";
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -14,22 +14,50 @@ const HeaderContainer = styled.div`
   z-index: 10;
   display: flex;
   justify-content: space-around;
-  color: black;
-
   a {
+    text-decoration: none;
+    color: black;
   }
 `;
 
+const links = [
+  {
+    translation: "home",
+    href: "#home",
+    isActive: false,
+  },
+  {
+    translation: "aboutUs",
+    href: "#aboutUs",
+    isActive: false,
+  },
+  {
+    translation: "project",
+    href: "#project",
+    isActive: false,
+  },
+  {
+    translation: "device",
+    href: "#device",
+    isActive: false,
+  },
+  {
+    translation: "contact",
+    href: "#contact",
+    isActive: false,
+  },
+];
+
 const Header = () => {
-  const [language] = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <HeaderContainer>
-      {/* {Object.entries(data.translationsJson.links).map(([name, text]) => (
-        <a key={name} href={`#${name}`}>
-          {text}
+      {links.map((link, i) => (
+        <a href={link.href} key={i}>
+          {t(`links.${link.translation}`)}
         </a>
-      ))} */}
+      ))}
     </HeaderContainer>
   );
 };
