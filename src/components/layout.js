@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { withTrans } from "../i18n/withTrans";
+
 import Header from "../components/header";
 import GlobalStyle from "../styles/globalCss";
 import theme from "../styles/theme";
@@ -18,17 +20,15 @@ const Footer = styled.footer`
   background: #f0f0f0;
 `;
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Header />
-        <Content>
-          {children}
-        </Content>
-        <Footer />
+      <GlobalStyle />
+      <Header />
+      <Content>{children}</Content>
+      <Footer></Footer>
     </ThemeProvider>
   );
 };
 
-export default Layout;
+export default withTrans(Layout);

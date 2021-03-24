@@ -4,12 +4,11 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `translations`,
-        path: `${__dirname}/src/translations/`,
+        path: `${__dirname}/src/locales/`,
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
