@@ -5,7 +5,7 @@ const Theme = {
     accentLight: "#93f0f7",
     fontPrimary: "#3e3d3d",
     fontSecondary: "#647676",
-    white: "#fff"
+    white: "#fff",
   },
   typography: {
     fontExtraLarge: "4rem", // 64px Large Title           22px
@@ -17,6 +17,11 @@ const Theme = {
   borders: {
     small: "3px",
     regular: "5px",
+  },
+  breakpoints: {
+    sm: "320px",
+    md: "768px",
+    lg: "1024px",
   },
 };
 

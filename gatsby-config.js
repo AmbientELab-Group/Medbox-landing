@@ -12,6 +12,14 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
     `gatsby-transformer-json`,
   ],
 };

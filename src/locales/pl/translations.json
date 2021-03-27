@@ -5,5 +5,6 @@
     "project": "Projekt",
     "device": "Urządzenie",
     "contact": "Kontakt"
-  }
+  },
+  "signIn": "Zaloguj się"
 }
