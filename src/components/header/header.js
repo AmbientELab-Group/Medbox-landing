@@ -1,28 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import { useTranslation } from "react-i18next";
-import LogoImg from "../assets/logo.svg";
-import OutlineButton from "./outlineButton";
+import LogoImg from "../../assets/logo.svg";
 import NavLinks from "./navLinks";
+import SideNav from "./sideNav";
+import Burger from "./burger";
 
 const HeaderContainer = styled.div`
   font-size: ${({ theme }) => theme.typography.fontMedium};
   width: 100%;
-  padding: 1.25em;
+  padding: 2rem 1.25rem;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+const NavLinksContainer = styled.div`
   ul,
-  a {
+  p {
     display: none;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     ul,
-    a {
+    p {
       display: flex;
     }
   }
@@ -39,7 +42,11 @@ const Logo = styled.div`
 `;
 
 const Header = () => {
-  const { t } = useTranslation();
+  const [isSidenavOpen, setIsSidenavOpen] = useState(false);
+
+  const toggleSidenav = () => {
+    setIsSidenavOpen(!isSidenavOpen);
+  };
 
   return (
     <HeaderContainer>
@@ -47,8 +54,14 @@ const Header = () => {
         <LogoImg />
         <span>Ambient</span>
       </Logo>
-      <NavLinks></NavLinks>
-      <OutlineButton>{t("signIn")}</OutlineButton>
+      <NavLinksContainer>
+        <NavLinks direction="row" />
+      </NavLinksContainer>
+      <Burger isSidenavOpen={isSidenavOpen} clickHandler={toggleSidenav} />
+      <SideNav
+        isSidenavOpen={isSidenavOpen}
+        outsideClickHandler={() => setIsSidenavOpen(false)}
+      />
     </HeaderContainer>
   );
 };

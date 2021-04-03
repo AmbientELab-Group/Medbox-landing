@@ -29,22 +29,31 @@ const links = [
 
 const LinksContainer = styled.ul`
   display: flex;
+  flex-direction: ${({ direction }) => direction};
   flex-basis: 50%;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  text-align: center;
 `;
 
 const NavLinkItem = styled.li`
   display: flex;
   flex-direction: column;
   padding: 0 0.2em;
-  a {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  & :focus {
+    outline: none !important;
+  }
+  p {
     text-decoration: none;
     color: ${({ theme }) => theme.colors.fontPrimary};
     height: fit-content;
     margin: 0 0.5em;
     font-weight: 900;
+    white-space: nowrap;
   }
   span {
     height: 3px;
@@ -53,19 +62,28 @@ const NavLinkItem = styled.li`
   }
 `;
 
-const NavLinks = () => {
+const NavLinks = ({ direction, onLinkClick }) => {
   const { t } = useTranslation();
   const [selectedLink, setSelectedLink] = useState(links[0]);
 
+  const handleLinkClick = (link) => {
+    setSelectedLink(link);
+    setTimeout(() => {
+      window.location.href = link.href;
+      if (onLinkClick) {
+        onLinkClick();
+      }
+    }, 250);
+  };
+
   return (
     <AnimateSharedLayout>
-      <LinksContainer>
+      <LinksContainer direction={direction}>
         {links.map((link, i) => (
           <NavLink
             isActive={selectedLink === link}
-            href={link.href}
             key={i}
-            onClick={() => setSelectedLink(link)}
+            onClick={() => handleLinkClick(link)}
           >
             {t(`links.${link.translation}`)}
           </NavLink>
@@ -75,10 +93,10 @@ const NavLinks = () => {
   );
 };
 
-const NavLink = ({ href, isActive, onClick, children }) => {
+const NavLink = ({ isActive, onClick, children }) => {
   return (
     <NavLinkItem onClick={onClick}>
-      <a href={href}>{children}</a>
+      <p>{children}</p>
       {isActive && (
         <motion.span layoutId="underline" initial={false} transition={spring} />
       )}
