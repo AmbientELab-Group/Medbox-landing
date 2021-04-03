@@ -2,7 +2,7 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { withTrans } from "../i18n/withTrans";
 
-import Header from "../components/header";
+import Header from "../components/header/header";
 import GlobalStyle from "../styles/globalCss";
 import theme from "../styles/theme";
 
