@@ -7,11 +7,12 @@ import SideNav from "./sideNav";
 import Burger from "./burger";
 
 const HeaderContainer = styled.div`
-  font-size: ${({ theme }) => theme.typography.fontMedium};
-  width: 100%;
-  padding: 2rem 1.25rem;
+  position: absolute;
   top: 0;
   left: 0;
+  font-size: ${({ theme }) => theme.typography.fontMedium};
+  width: 100%;
+  padding: 1em 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +25,8 @@ const NavLinksContainer = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 1.25em 4rem;
+
     ul,
     p {
       display: flex;
