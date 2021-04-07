@@ -10,6 +10,7 @@ const Content = styled.main`
   display: flex;
   height: 100%;
   flex-direction: column;
+  margin-top: 50px;
 `;
 
 const Footer = styled.footer`
