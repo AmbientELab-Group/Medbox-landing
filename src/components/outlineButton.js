@@ -3,9 +3,9 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.a`
-  border: solid ${({ theme }) => theme.colors.accent}
-    ${(props) =>
-      props.thick ? props.theme.borders.regular : props.theme.borders.small};
+  border: solid ${({ theme }) => theme.colors.accent};
+  ${(props) =>
+    props.thick ? props.theme.borders.regular : props.theme.borders.small};
   font-size: ${({ theme }) => theme.typography.fontLarge};
   border-radius: 0.8em;
   width: fit-content;
@@ -14,6 +14,7 @@ const Wrapper = styled.a`
   color: ${({ theme }) => theme.colors.fontPrimary};
   cursor: pointer;
   transition: ease-in-out 0.3s;
+  white-space: nowrap;
 
   /* &:hover {
     background-color: ${({ theme }) => theme.colors.accent};
