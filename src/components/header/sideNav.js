@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled, { keyframes, css } from "styled-components";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
+import Burger from "./burger";
 import NavLinks from "./navLinks";
+import ClickAway from "./clickAway";
 
 const slideIn = keyframes`
   from {
@@ -28,42 +29,44 @@ const NavContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   width: fit-content;
   padding: 6rem 2rem;
-  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
-  transition: opacity 0.3s ease-in-out;
-  animation: ${({ isVisible }) =>
-    isVisible
+  ${({ $isVisible }) =>
+    $isVisible
       ? css`
-          ${slideIn} 0.3s ease-in-out
+          visibility: visible;
+          opacity: 1;
+          animation: ${slideIn} 0.3s ease-in-out;
         `
       : css`
-          ${slideOut} 0.3s ease-in-out
+          visibility: hidden;
+          opacity: 0;
+          animation: ${slideOut} 0.3s ease-in-out;
         `};
+  transition: all 0.3s ease-in-out;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: none;
   }
 `;
 
-const SideNav = ({ isSidenavOpen, outsideClickHandler }) => {
-  const handleOutsideClick = (e) => {
-    const clickedOutsideBurger = !e.target.className
-      .toLowerCase()
-      .includes("burger");
-    if (isSidenavOpen && clickedOutsideBurger) {
-      outsideClickHandler();
-    }
+const SideNav = ({ isSidenavOpen, setIsSidenavOpen }) => {
+  const toggleSidenav = () => {
+    setIsSidenavOpen(!isSidenavOpen);
   };
-  const ref = useRef();
-  useOnClickOutside(ref, (e) => handleOutsideClick(e));
   return (
-    <NavContainer ref={ref} isVisible={isSidenavOpen}>
-      <NavLinks direction="column" onLinkClick={outsideClickHandler} />
-    </NavContainer>
+    <div>
+      <Burger isSidenavOpen={isSidenavOpen} clickHandler={toggleSidenav} />
+      <NavContainer $isVisible={isSidenavOpen}>
+        <NavLinks direction="column" onLinkClick={toggleSidenav} />
+      </NavContainer>
+      {isSidenavOpen ? (
+        <ClickAway onClick={() => setIsSidenavOpen(false)} />
+      ) : null}
+    </div>
   );
 };
 

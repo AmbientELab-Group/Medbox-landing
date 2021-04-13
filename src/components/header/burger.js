@@ -12,6 +12,9 @@ const BurgerLine = styled.div`
 `;
 
 const BurgerContainer = styled.div`
+  position: fixed;
+  top: 1em;
+  right: 1rem;
   width: 3rem;
   height: 3rem;
   padding: 0.75rem;
@@ -20,7 +23,7 @@ const BurgerContainer = styled.div`
     $open ? "transparent" : "0 4px 8px 0 rgba(0, 0, 0, 0.2)"};
   background: ${({ $open, theme }) =>
     $open ? "transparent" : theme.colors.white};
-  z-index: 100;
+  z-index: 1000;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -38,8 +41,6 @@ const BurgerContainer = styled.div`
     }
     &:nth-child(2) {
       opacity: ${({ $open }) => ($open ? "0" : "1")};
-      transform: ${({ $open }) =>
-        $open ? "translateX(-20px)" : "translate(0)"};
     }
     &:nth-child(3) {
       transform: ${({ $open }) => ($open ? "rotate(-45deg)" : "rotate(0)")};
