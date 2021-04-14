@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
 import LogoImg from "../../assets/logo.svg";
 import NavLinks from "./navLinks";
 import SideNav from "./sideNav";
-import Burger from "./burger";
 
 const HeaderContainer = styled.div`
   position: absolute;
@@ -46,11 +44,6 @@ const Logo = styled.div`
 
 const Header = () => {
   const [isSidenavOpen, setIsSidenavOpen] = useState(false);
-
-  const toggleSidenav = () => {
-    setIsSidenavOpen(!isSidenavOpen);
-  };
-
   return (
     <HeaderContainer>
       <Logo>
@@ -60,10 +53,9 @@ const Header = () => {
       <NavLinksContainer>
         <NavLinks direction="row" />
       </NavLinksContainer>
-      <Burger isSidenavOpen={isSidenavOpen} clickHandler={toggleSidenav} />
       <SideNav
         isSidenavOpen={isSidenavOpen}
-        outsideClickHandler={() => setIsSidenavOpen(false)}
+        setIsSidenavOpen={setIsSidenavOpen}
       />
     </HeaderContainer>
   );
