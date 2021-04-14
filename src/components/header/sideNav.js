@@ -32,8 +32,13 @@ const NavContainer = styled.div`
   z-index: 100;
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  padding: 6rem 2rem;
+  max-width: fit-content;
+  ul {
+    padding: 5rem 3rem;
+    li {
+      padding: 1rem 0;
+    }
+  }
   ${({ $isVisible }) =>
     $isVisible
       ? css`
