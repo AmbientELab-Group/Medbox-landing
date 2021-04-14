@@ -1,0 +1,65 @@
+[
+  {
+    "members": [
+      {
+        "name": "Michal Okrasa",
+        "role": "Fullstack Developer",
+        "photo": "./images/Placeholder.png"
+      },
+      {
+        "name": "Janek Lewandoski",
+        "role": "Frontend Developer",
+        "photo": "./images/Placeholder2.png"
+      },
+      {
+        "name": "Natalia Bartłomiejczyk",
+        "role": "UI Design",
+        "photo": "./images/Placeholder2.png"
+      },
+      {
+        "name": "Adam Lewczuk",
+        "role": "Mechanical Design",
+        "photo": "./images/Placeholder2.png"
+      },
+      {
+        "name": "Krzysztof Adamkiewicz",
+        "role": "Electronics Developer",
+        "photo": "./images/Placeholder2.png"
+      }
+    ]
+  },
+  {
+    "members": [
+      {
+        "name": "Adam Lewczuk",
+        "role": "Mechanical Design",
+        "photo": "./images/Placeholder2.png"
+      },
+      {
+        "name": "Krzysztof Adamkiewicz",
+        "role": "Electronics Developer",
+        "photo": "./images/Placeholder2.png"
+      },
+      {
+        "name": "Michal Okrasa",
+        "role": "Fullstack Developer",
+        "photo": "./images/Placeholder.png"
+      },
+      {
+        "name": "Janek Lewandoski",
+        "role": "Frontend Developer",
+        "photo": "./images/Placeholder2.png"
+      },
+      {
+        "name": "Michal Okrasa",
+        "role": "Fullstack Developer",
+        "photo": "./images/Placeholder.png"
+      },
+      {
+        "name": "Janek Lewandoski",
+        "role": "Frontend Developer",
+        "photo": "./images/Placeholder2.png"
+      }
+    ]
+  }
+]
