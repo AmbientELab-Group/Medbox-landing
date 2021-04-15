@@ -50,7 +50,6 @@ const AboutSection = ({ id }) => {
     }
   `);
   const membersPages = allMembersJson.edges.map((edge) => edge.node.members);
-  console.log(membersPages);
 
   return (
     <Section id={id}>
