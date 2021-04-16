@@ -56,15 +56,15 @@ const AboutSection = ({ id }) => {
       <SectionLayout>
         <Title>{t("sections.about.title")}</Title>
         <Slider>
-          {membersPages.map((page) => (
-            <MembersWrapper>
-              {page.map((member) => (
+          {membersPages.map((page, idx) => (
+            <MembersWrapper key={idx}>
+              {page.map((member, idx) => (
                 <TeamMember
-                  key={member.name}
+                  key={member.name + idx}
                   name={member.name}
-                  role={t(member.role)}
+                  role={member.role}
                   photo={member.photo}
-                  photoAlt={t("Image of ") + member.name}
+                  photoAlt={t("sections.about.alt", { name: member.name })}
                 />
               ))}
             </MembersWrapper>

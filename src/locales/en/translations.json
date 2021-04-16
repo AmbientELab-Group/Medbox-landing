@@ -14,7 +14,8 @@
       "button": "Get App"
     },
     "about": {
-      "title": "Our team"
+      "title": "Our team",
+      "alt": "Image of {{name}}"
     }
   }
 }

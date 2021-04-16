@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import RightArrowIcon from "../assets/right-arrow.svg";
 import LeftArrowIcon from "../assets/left-arrow.svg";
@@ -123,20 +123,26 @@ const getChildrenCount = (children) => {
 const Slider = ({ children, className }) => {
   const [visibleIdx, setVisibleIdx] = useState(0);
   const itemCount = useRef(getChildrenCount(children));
-  const [activeChildren, setActiveChildren] = useState(() => (
-    <ChildrenWrapper>
-      {itemCount.current === 1 ? children : children[0]}
-    </ChildrenWrapper>
-  ));
+  const [activeChildren, setActiveChildren] = useState(null);
+
+  useEffect(() => {
+    setActiveChildren(
+      <ChildrenWrapper>
+        {itemCount.current === 1 ? children : children[0]}
+      </ChildrenWrapper>
+    );
+  }, [children]);
+
+  const hasPrevSlide = () => visibleIdx > 0;
+  const hasNextSlide = () => visibleIdx < itemCount.current - 1;
 
   const goNext = () => {
-    const newIdx =
-      visibleIdx < itemCount.current - 1 ? visibleIdx + 1 : visibleIdx;
+    const newIdx = hasNextSlide() ? visibleIdx + 1 : visibleIdx;
     setVisibleIdx(newIdx);
     setActiveChildren(getChildrenRight(children, newIdx));
   };
   const goBack = () => {
-    const newIdx = visibleIdx > 0 ? visibleIdx - 1 : visibleIdx;
+    const newIdx = hasPrevSlide() ? visibleIdx - 1 : visibleIdx;
     setVisibleIdx(newIdx);
     setActiveChildren(getChildrenLeft(children, newIdx));
   };
@@ -144,7 +150,7 @@ const Slider = ({ children, className }) => {
   return (
     <SliderContainer className={className}>
       <SliderSide>
-        {visibleIdx !== 0 && (
+        {hasPrevSlide() && (
           <ArrowWrapper>
             <LeftArrowIcon onClick={goBack} />
           </ArrowWrapper>
@@ -152,7 +158,7 @@ const Slider = ({ children, className }) => {
       </SliderSide>
       <SlideWrapper>{activeChildren}</SlideWrapper>
       <SliderSide>
-        {visibleIdx !== itemCount.current - 1 && (
+        {hasNextSlide() && (
           <ArrowWrapper>
             <RightArrowIcon onClick={goNext} />
           </ArrowWrapper>
