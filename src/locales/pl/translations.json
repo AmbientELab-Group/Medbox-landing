@@ -6,5 +6,16 @@
     "device": "Urządzenie",
     "contact": "Kontakt"
   },
-  "signIn": "Zaloguj się"
+  "signIn": "Zaloguj się",
+  "sections": {
+    "home": {
+      "title": ["The ultimate solution for managing medicines", "."],
+      "description": "Smart medication dispenser with remote monitoring for doctors and caregivers.",
+      "button": "Get App"
+    },
+    "about": {
+      "title": "Nasz zespół",
+      "alt": "Zdjęcie {{name}}"
+    }
+  }
 }
