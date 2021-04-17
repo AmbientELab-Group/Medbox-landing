@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const links = [
+export const links = [
   {
     translation: "home",
     href: "#home",
