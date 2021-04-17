@@ -11,7 +11,7 @@ const links = [
   },
   {
     translation: "aboutUs",
-    href: "#aboutUs",
+    href: "#about",
   },
   //   {
   //     translation: "project",

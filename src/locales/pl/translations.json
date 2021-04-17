@@ -16,6 +16,12 @@
     "about": {
       "title": "Nasz zespół",
       "alt": "Zdjęcie {{name}}"
+    },
+    "contact": {
+      "title": ["Start your new treatment with ", "us", "."],
+      "buttons": {
+        "getInTouch": "Get in touch"
+      }
     }
   }
 }
