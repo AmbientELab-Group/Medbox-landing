@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import LogoImg from "../assets/logo.svg";
-import { links } from "../components/header/navLinks";
+import { links } from "../components/header/header";
 
 const FooterWrapper = styled.footer`
   display: flex;
@@ -15,11 +15,14 @@ const FooterWrapper = styled.footer`
   color: ${({ theme }) => theme.colors.fontSecondary};
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     text-align: center;
     li {
+      flex: 1;
       padding: 2rem 0.5rem;
       cursor: pointer;
+      white-space: nowrap;
     }
   }
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {

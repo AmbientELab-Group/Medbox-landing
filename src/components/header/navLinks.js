@@ -1,31 +1,7 @@
 import { AnimateSharedLayout, motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
-export const links = [
-  {
-    translation: "home",
-    href: "#home",
-  },
-  {
-    translation: "aboutUs",
-    href: "#about",
-  },
-  //   {
-  //     translation: "project",
-  //     href: "#project",
-  //   },
-  {
-    translation: "device",
-    href: "#device",
-  },
-  {
-    translation: "contact",
-    href: "#contact",
-  },
-];
 
 const LinksContainer = styled.ul`
   display: flex;
@@ -62,19 +38,8 @@ const NavLinkItem = styled.li`
   }
 `;
 
-const NavLinks = ({ direction, onLinkClick }) => {
+const NavLinks = ({ links, selectedLink, direction, handleLinkClick }) => {
   const { t } = useTranslation();
-  const [selectedLink, setSelectedLink] = useState(links[0]);
-
-  const handleLinkClick = (link) => {
-    setSelectedLink(link);
-    setTimeout(() => {
-      window.location.href = link.href;
-      if (onLinkClick) {
-        onLinkClick();
-      }
-    }, 250);
-  };
 
   return (
     <AnimateSharedLayout>

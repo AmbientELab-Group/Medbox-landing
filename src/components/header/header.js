@@ -4,6 +4,29 @@ import LogoImg from "../../assets/logo.svg";
 import NavLinks from "./navLinks";
 import SideNav from "./sideNav";
 
+export const links = [
+  {
+    translation: "home",
+    href: "#home",
+  },
+  {
+    translation: "aboutUs",
+    href: "#about",
+  },
+  //   {
+  //     translation: "project",
+  //     href: "#project",
+  //   },
+  {
+    translation: "device",
+    href: "#device",
+  },
+  {
+    translation: "contact",
+    href: "#contact",
+  },
+];
+
 const HeaderContainer = styled.div`
   position: absolute;
   top: 0;
@@ -43,7 +66,24 @@ const Logo = styled.div`
 `;
 
 const Header = () => {
+  const [selectedLink, setSelectedLink] = useState(links[0]);
   const [isSidenavOpen, setIsSidenavOpen] = useState(false);
+
+  const handleLinkClick = (link) => {
+    setSelectedLink(link);
+    setTimeout(() => {
+      window.location.href = link.href;
+    }, 250);
+  };
+
+  const handleSidenavLinkClick = (link) => {
+    setSelectedLink(link);
+    setTimeout(() => {
+      window.location.href = link.href;
+      setIsSidenavOpen(false);
+    }, 250);
+  };
+
   return (
     <HeaderContainer>
       <Logo>
@@ -51,9 +91,17 @@ const Header = () => {
         <span>Ambient</span>
       </Logo>
       <NavLinksContainer>
-        <NavLinks direction="row" />
+        <NavLinks
+          links={links}
+          selectedLink={selectedLink}
+          handleLinkClick={handleLinkClick}
+          direction="row"
+        />
       </NavLinksContainer>
       <SideNav
+        links={links}
+        selectedLink={selectedLink}
+        handleLinkClick={handleSidenavLinkClick}
         isSidenavOpen={isSidenavOpen}
         setIsSidenavOpen={setIsSidenavOpen}
       />
