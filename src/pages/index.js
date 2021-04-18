@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import AboutSection from "../sections/about";
 import HomeSection from "../sections/home";
 import ProjectSection from "../sections/project";
-
+import ContactSection from "../sections/contact";
 import { useTranslation } from "react-i18next";
 
 const IndexPage = () => {
@@ -19,6 +19,7 @@ const IndexPage = () => {
       <HomeSection id="home" />
       <AboutSection id="about" />
       <ProjectSection id="project" />
+      <ContactSection id="contact" />
     </Layout>
   );
 };

@@ -1,28 +1,11 @@
 import React from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled from "styled-components";
 import Burger from "./burger";
 import NavLinks from "./navLinks";
 import ClickAway from "./clickAway";
+import { AnimatePresence, motion } from "framer-motion";
 
-const slideIn = keyframes`
-  from {
-  transform: translateX(100%);
-  }
-  to {
-  transform: translateX(0);
-  }
-`;
-
-const slideOut = keyframes`
-  from {
-  transform: translateX(0);
-  }
-  to {
-  transform: translateX(100%);
-  }
-`;
-
-const NavContainer = styled.div`
+const NavContainer = styled(motion.div)`
   height: 100vh;
   background: ${({ theme }) => theme.colors.white};
   box-shadow: 0px 0px 8px 0 rgba(0, 0, 0, 0.2);
@@ -39,38 +22,51 @@ const NavContainer = styled.div`
       padding: 1rem 0;
     }
   }
-  ${({ $isVisible }) =>
-    $isVisible
-      ? css`
-          visibility: visible;
-          opacity: 1;
-          animation: ${slideIn} 0.3s ease-in-out;
-        `
-      : css`
-          visibility: hidden;
-          opacity: 0;
-          animation: ${slideOut} 0.3s ease-in-out;
-        `};
-  transition: all 0.3s ease-in-out;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: none;
   }
 `;
 
-const SideNav = ({ isSidenavOpen, setIsSidenavOpen }) => {
+const SideNav = ({
+  links,
+  selectedLink,
+  handleLinkClick,
+  isSidenavOpen,
+  setIsSidenavOpen,
+}) => {
   const toggleSidenav = () => {
     setIsSidenavOpen(!isSidenavOpen);
   };
   return (
     <div>
       <Burger isSidenavOpen={isSidenavOpen} clickHandler={toggleSidenav} />
-      <NavContainer $isVisible={isSidenavOpen}>
-        <NavLinks direction="column" onLinkClick={toggleSidenav} />
-      </NavContainer>
-      {isSidenavOpen ? (
-        <ClickAway onClick={() => setIsSidenavOpen(false)} />
-      ) : null}
+      <AnimatePresence>
+        {isSidenavOpen && (
+          <div>
+            <NavContainer
+              initial={{ translateX: "100%" }}
+              animate={{ translateX: "0%" }}
+              exit={{ translateX: "100%" }}
+              transition={{ type: "linear", duration: 0.3 }}
+            >
+              <NavLinks
+                links={links}
+                selectedLink={selectedLink}
+                handleLinkClick={handleLinkClick}
+                direction="column"
+                onLinkClick={toggleSidenav}
+              />
+            </NavContainer>
+            <ClickAway
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: "linear", duration: 0.3 }}
+              onClick={() => setIsSidenavOpen(false)}
+            />
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
