@@ -1,0 +1,114 @@
+import React from "react";
+import styled from "styled-components";
+import Section from "../components/section";
+import { useTranslation } from "react-i18next";
+import Title from "../components/typography/title";
+import Text from "../components/typography/text";
+import Slider from "../components/slider";
+import { StaticImage } from "gatsby-plugin-image";
+import HomeCircleImg from "../assets/home-circle.svg";
+import OutlineButton from "../components/outlineButton";
+
+const SectionLayout = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    flex-direction: row;
+  }
+`;
+
+const StyledTitle = styled(Title)`
+  margin: 2rem 0;
+`;
+
+const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding-left: 4rem;
+    flex: 0.3;
+    align-self: start;
+  }
+`;
+
+const StyledButton = styled(OutlineButton)`
+  align-self: start;
+  margin: 2rem 0;
+`;
+
+const SliderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    flex: 0.7;
+  }
+`;
+
+const StyledSlider = styled(Slider)`
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 80%;
+  }
+`;
+
+const StyledHomeCircle = styled(HomeCircleImg)`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70%;
+  height: auto;
+`;
+
+const DeviceSection = ({ id }) => {
+  const { t } = useTranslation();
+
+  return (
+    <Section id={id}>
+      <SectionLayout>
+        <TextWrapper>
+          <StyledTitle>{t("sections.device.title")}</StyledTitle>
+          <Text>{t("sections.device.description")}</Text>
+          <StyledButton>{t("sections.device.button")}</StyledButton>
+        </TextWrapper>
+        <SliderWrapper>
+          <StyledHomeCircle />
+          <StyledSlider>
+            <StaticImage
+              src="../images/renders/ambient_v1_render_0.png"
+              alt="Device image."
+              placeholder="blurred"
+              transformOptions={{ fit: "contain" }}
+              objectFit="contain"
+            />
+            <StaticImage
+              src="../images/renders/ambient_v1_render_1.png"
+              alt="Device image."
+              placeholder="blurred"
+              transformOptions={{ fit: "contain" }}
+              objectFit="contain"
+            />
+            <StaticImage
+              src="../images/renders/ambient_v1_render_2.png"
+              alt="Device image."
+              placeholder="blurred"
+              transformOptions={{ fit: "contain" }}
+              objectFit="contain"
+            />
+          </StyledSlider>
+        </SliderWrapper>
+      </SectionLayout>
+    </Section>
+  );
+};
+
+export default DeviceSection;

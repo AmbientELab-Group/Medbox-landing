@@ -4,6 +4,8 @@ import AboutSection from "../sections/about";
 import HomeSection from "../sections/home";
 import ProjectSection from "../sections/project";
 import ContactSection from "../sections/contact";
+import DeviceSection from "../sections/device";
+
 import { useTranslation } from "react-i18next";
 
 const IndexPage = () => {
@@ -18,7 +20,7 @@ const IndexPage = () => {
     <Layout t={t} i18n={i18n}>
       <HomeSection id="home" />
       <AboutSection id="about" />
-      <ProjectSection id="project" />
+      <DeviceSection id="device" />
       <ContactSection id="contact" />
     </Layout>
   );

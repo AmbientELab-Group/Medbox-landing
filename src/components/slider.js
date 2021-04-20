@@ -24,6 +24,9 @@ const ChildrenWrapper = styled(motion.div)`
   height: 100%;
   width: 100%;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const SliderSide = styled.div`
@@ -43,6 +46,7 @@ const ArrowWrapper = styled.div`
   width: 100px;
   display: flex;
   cursor: pointer;
+  z-index: 10;
 `;
 
 const ChildrenVariants = {
