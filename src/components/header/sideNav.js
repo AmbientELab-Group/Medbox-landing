@@ -4,6 +4,8 @@ import Burger from "./burger";
 import NavLinks from "./navLinks";
 import ClickAway from "./clickAway";
 import { AnimatePresence, motion } from "framer-motion";
+import OutlineButton from "../outlineButton";
+import { useTranslation } from "react-i18next";
 
 const NavContainer = styled(motion.div)`
   height: 100vh;
@@ -15,16 +17,19 @@ const NavContainer = styled(motion.div)`
   z-index: 100;
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: fit-content;
   ul {
     padding: 5rem 3rem;
+    padding-bottom: 3rem;
     li {
       padding: 1rem 0;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    display: none;
-  }
+`;
+
+const SyledOutlineButton = styled(OutlineButton)`
+  font-size: 1.25rem;
 `;
 
 const SideNav = ({
@@ -34,15 +39,18 @@ const SideNav = ({
   isSidenavOpen,
   setIsSidenavOpen,
 }) => {
+  const { t } = useTranslation();
   const toggleSidenav = () => {
     setIsSidenavOpen(!isSidenavOpen);
   };
+
+
   return (
-    <div>
+    <>
       <Burger isSidenavOpen={isSidenavOpen} clickHandler={toggleSidenav} />
       <AnimatePresence>
         {isSidenavOpen && (
-          <div>
+          <>
             <NavContainer
               initial={{ translateX: "100%" }}
               animate={{ translateX: "0%" }}
@@ -56,6 +64,7 @@ const SideNav = ({
                 direction="column"
                 onLinkClick={toggleSidenav}
               />
+              <SyledOutlineButton>{t("signIn")}</SyledOutlineButton>
             </NavContainer>
             <ClickAway
               initial={{ opacity: 0 }}
@@ -64,10 +73,10 @@ const SideNav = ({
               transition={{ type: "linear", duration: 0.3 }}
               onClick={() => setIsSidenavOpen(false)}
             />
-          </div>
+          </>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 };
 

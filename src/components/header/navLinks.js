@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 
 const LinksContainer = styled.ul`
   display: flex;
-  flex-direction: ${({ direction }) => direction};
+  flex-direction: ${({ $direction }) => $direction};
   flex-basis: 50%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
   text-align: center;
@@ -38,12 +38,18 @@ const NavLinkItem = styled.li`
   }
 `;
 
-const NavLinks = ({ links, selectedLink, direction, handleLinkClick }) => {
+const NavLinks = ({
+  className,
+  links,
+  selectedLink,
+  direction,
+  handleLinkClick,
+}) => {
   const { t } = useTranslation();
 
   return (
     <AnimateSharedLayout>
-      <LinksContainer direction={direction}>
+      <LinksContainer $direction={direction} className={className}>
         {links.map((link, i) => (
           <NavLink
             isActive={selectedLink === link}
