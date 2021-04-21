@@ -27,10 +27,10 @@ const StyledTitle = styled(Title)`
 const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
+  padding: 0 1rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding-left: 4rem;
+    padding: 0 4rem;
     flex: 0.3;
     align-self: start;
   }
