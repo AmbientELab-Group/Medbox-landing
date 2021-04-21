@@ -1,32 +1,36 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-const Wrapper = styled.a`
-  border: solid ${({ theme }) => theme.colors.accent};
-  ${(props) =>
-    props.thick ? props.theme.borders.regular : props.theme.borders.small};
-  font-size: ${({ theme }) => theme.typography.fontLarge};
+const Wrapper = styled(motion.a)`
+  border: ${({ theme, $thick }) =>
+    `solid ${theme.colors.accent} ${
+      $thick ? theme.borders.regular : theme.borders.small
+    }`};
+
+  font-size: 0.75rem;
   border-radius: 0.8em;
   width: fit-content;
   padding: 0.3em 1.3em;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.fontPrimary};
   cursor: pointer;
-  transition: ease-in-out 0.3s;
   white-space: nowrap;
 
-  /* &:hover {
-    background-color: ${({ theme }) => theme.colors.accent};
-    color: ${({ theme }) => theme.colors.white};
-
-    transition: ease-in-out 0.3s;
-  } */
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.625rem;
+  }
 `;
 
-const OutlineButton = ({ children, clickHandler, thick }) => {
+const OutlineButton = ({ children, className, clickHandler, thick }) => {
   return (
-    <Wrapper onClick={clickHandler} thick>
+    <Wrapper
+      className={className}
+      onClick={clickHandler}
+      $thick={thick}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
       {children}
     </Wrapper>
   );
