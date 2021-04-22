@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Layout from "../components/layout";
 import AboutSection from "../sections/about";
 import HomeSection from "../sections/home";
-import ProjectSection from "../sections/project";
 import ContactSection from "../sections/contact";
 import DeviceSection from "../sections/device";
 

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import LogoImg from "../../assets/logo.svg";
+import OutlineButton from "../outlineButton";
 import NavLinks from "./navLinks";
 import SideNav from "./sideNav";
+import { useTranslation } from "react-i18next";
 
 export const links = [
   {
@@ -13,10 +15,6 @@ export const links = [
     translation: "aboutUs",
     href: "#about",
   },
-  //   {
-  //     translation: "project",
-  //     href: "#project",
-  //   },
   {
     translation: "device",
     href: "#device",
@@ -39,19 +37,12 @@ const HeaderContainer = styled.div`
   align-items: center;
 `;
 
-const NavLinksContainer = styled.div`
-  ul,
-  p {
-    display: none;
-  }
+const StyledNavLinks = styled(NavLinks)`
+  display: none;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding: 1.25em 4rem;
-
-    ul,
-    p {
-      display: flex;
-    }
+    display: flex;
+    flex: 1;
   }
 `;
 
@@ -65,9 +56,18 @@ const Logo = styled.div`
   }
 `;
 
+const StyledOutlineButton = styled(OutlineButton)`
+  display: none;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: block;
+  }
+`;
+
 const Header = () => {
   const [selectedLink, setSelectedLink] = useState(links[0]);
   const [isSidenavOpen, setIsSidenavOpen] = useState(false);
+  const { t } = useTranslation();
 
   const handleLinkClick = (link) => {
     setSelectedLink(link);
@@ -90,14 +90,13 @@ const Header = () => {
         <LogoImg />
         <span>Ambient</span>
       </Logo>
-      <NavLinksContainer>
-        <NavLinks
-          links={links}
-          selectedLink={selectedLink}
-          handleLinkClick={handleLinkClick}
-          direction="row"
-        />
-      </NavLinksContainer>
+      <StyledNavLinks
+        links={links}
+        selectedLink={selectedLink}
+        handleLinkClick={handleLinkClick}
+        direction="row"
+      />
+      <StyledOutlineButton>{t("signIn")}</StyledOutlineButton>
       <SideNav
         links={links}
         selectedLink={selectedLink}
