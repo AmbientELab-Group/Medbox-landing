@@ -4,7 +4,7 @@ import Burger from "./burger";
 import NavLinks from "./navLinks";
 import ClickAway from "./clickAway";
 import { AnimatePresence, motion } from "framer-motion";
-import OutlineButton from "../outlineButton";
+import OutlineLinkButton from "../outlineLinkButton";
 import { useTranslation } from "react-i18next";
 
 const NavContainer = styled(motion.div)`
@@ -28,7 +28,7 @@ const NavContainer = styled(motion.div)`
   }
 `;
 
-const SyledOutlineButton = styled(OutlineButton)`
+const SyledOutlineButton = styled(OutlineLinkButton)`
   font-size: 1.25rem;
 `;
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import LogoImg from "../../assets/logo.svg";
-import OutlineButton from "../outlineButton";
+import OutlineLinkButton from "../outlineLinkButton";
 import NavLinks from "./navLinks";
 import SideNav from "./sideNav";
 import { useTranslation } from "react-i18next";
@@ -56,7 +56,7 @@ const Logo = styled.div`
   }
 `;
 
-const StyledOutlineButton = styled(OutlineButton)`
+const StyledOutlineButton = styled(OutlineLinkButton)`
   display: none;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
