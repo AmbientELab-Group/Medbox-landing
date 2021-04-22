@@ -7,13 +7,15 @@ import ColorAccent from "../components/typography/colorAccent";
 import Text from "../components/typography/text";
 import LinkButton from "../components/linkButton";
 import DownIcon from "../components/downIcon";
+import { StaticImage } from "gatsby-plugin-image";
+import HomeCircleImg from "../assets/home-circle.svg";
 
 const SectionLayout = styled.div`
   height: 100%;
   padding-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 9fr 1fr;
+  grid-template-rows: auto 7fr 3fr;
   padding-left: 1rem;
 
   grid-template-areas:
@@ -22,6 +24,7 @@ const SectionLayout = styled.div`
     "more more";
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    grid-template-rows: auto 9fr 1fr;
     padding-top: 7rem;
     padding-left: 4rem;
     grid-template-areas:
@@ -55,7 +58,17 @@ const DescriptionWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   grid-area: image;
-  background-color: #ddd;
+  position: relative;
+`;
+
+const StyledHomeCircle = styled(HomeCircleImg)`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 `;
 
 const ButtonWrapper = styled.div`
@@ -71,7 +84,7 @@ const IconWrapper = styled.div`
   grid-area: more;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 1rem 0;
   padding-right: 1rem;
 
@@ -98,11 +111,29 @@ const HomeSection = ({ id }) => {
             <ColorAccent>{t("sections.home.title")[1]}</ColorAccent>
           </Title>
         </TitleWrapper>
-        <ImageWrapper>Image placeholder</ImageWrapper>
+        <ImageWrapper>
+          <StyledHomeCircle />
+          <StaticImage
+            src="../images/renders/Home.png"
+            alt="Device image."
+            placeholder="blurred"
+            style={{
+              height: "auto",
+              width: "90%",
+              maxHeight: "100%",
+              maxWidth: "100%",
+            }}
+            imgStyle={{ objectFit: "contain" }}
+          />
+        </ImageWrapper>
         <DescriptionWrapper>
           <Text>{t("sections.home.description")}</Text>
           <ButtonWrapper>
-            <LinkButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+            <LinkButton
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              href={process.env.GATSBY_WEBAPP_URL}
+            >
               {t("sections.home.button")}
             </LinkButton>
           </ButtonWrapper>

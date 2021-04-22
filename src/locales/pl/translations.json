@@ -9,18 +9,23 @@
   "signIn": "Zaloguj się",
   "sections": {
     "home": {
-      "title": ["The ultimate solution for managing medicines", "."],
-      "description": "Smart medication dispenser with remote monitoring for doctors and caregivers.",
-      "button": "Get App"
+      "title": ["Bezkompromisowe rozwiązanie do zarządzania lekami", "."],
+      "description": "Inteligentny dozownik leków dla osób starszych z możliwością zdalnego monitorowania przez lekarzy i opiekunów.",
+      "button": "Przejdź do aplikacji"
     },
     "about": {
       "title": "Nasz zespół",
       "alt": "Zdjęcie {{name}}"
     },
+    "device": {
+      "title": "Urządzenie",
+      "description": "Zaprojektowaliśmy nasz inteligentny dozownik aby pomóc osobom korzystającym z wielu leków na raz, zapewniając prostotę i bezpieczeństwo ich przyjmowania. Wykorzystując naszą aplikację, dozownik pozwala monitorować stosowanie terapii. Urządzenie oferuje wiele świetnych funkcji, takich jak powiadomienia głosowe, duży wyświetlacz pokazujący przestrzeganie terapii oraz łatwo wymienialne pojemniki na tabletki.",
+      "button": "Zobacz więcej"
+    },
     "contact": {
-      "title": ["Start your new treatment with ", "us", "."],
+      "title": ["Rozpocznij swoją następną terapię z ", "nami", "."],
       "buttons": {
-        "getInTouch": "Get in touch"
+        "getInTouch": "Skontaktuj się"
       }
     }
   }

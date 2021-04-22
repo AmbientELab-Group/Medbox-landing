@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: "Ambient Landing Page",
@@ -31,5 +35,17 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Ambient Landing Page",
+        short_name: "Ambient",
+        start_url: "/",
+        background_color: "#FDFDFD",
+        theme_color: "#34C5D0",
+        display: "standalone",
+        icon: "src/images/icon.png",
+      },
+    },
   ],
 };

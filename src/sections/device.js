@@ -7,7 +7,7 @@ import Text from "../components/typography/text";
 import Slider from "../components/slider";
 import { StaticImage } from "gatsby-plugin-image";
 import HomeCircleImg from "../assets/home-circle.svg";
-import OutlineButton from "../components/outlineButton";
+import OutlineLinkButton from "../components/outlineLinkButton";
 
 const SectionLayout = styled.div`
   height: 100%;
@@ -36,7 +36,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-const StyledButton = styled(OutlineButton)`
+const StyledButton = styled(OutlineLinkButton)`
   align-self: start;
   margin: 2rem 0;
 `;
@@ -67,6 +67,8 @@ const StyledHomeCircle = styled(HomeCircleImg)`
   right: 0px;
   width: 70%;
   height: auto;
+  max-height: 100%;
+  max-width: 100%;
 `;
 
 const DeviceSection = ({ id }) => {
@@ -84,25 +86,62 @@ const DeviceSection = ({ id }) => {
           <StyledHomeCircle />
           <StyledSlider>
             <StaticImage
-              src="../images/renders/ambient_v1_render_0.png"
+              src="../images/renders/carousel1.png"
               alt="Device image."
-              placeholder="blurred"
-              transformOptions={{ fit: "contain" }}
-              objectFit="contain"
+              placeholder="tracedSVG"
+              style={{
+                height: "auto",
+                width: "90%",
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+              imgStyle={{ objectFit: "contain" }}
             />
             <StaticImage
-              src="../images/renders/ambient_v1_render_1.png"
+              src="../images/renders/carousel2.png"
               alt="Device image."
-              placeholder="blurred"
-              transformOptions={{ fit: "contain" }}
-              objectFit="contain"
+              placeholder="tracedSVG"
+              style={{
+                height: "auto",
+                width: "90%",
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+              imgStyle={{ objectFit: "contain" }}
             />
             <StaticImage
-              src="../images/renders/ambient_v1_render_2.png"
+              src="../images/renders/carousel3.png"
               alt="Device image."
-              placeholder="blurred"
-              transformOptions={{ fit: "contain" }}
-              objectFit="contain"
+              placeholder="tracedSVG"
+              style={{
+                height: "auto",
+                width: "90%",
+              }}
+              imgStyle={{ objectFit: "contain" }}
+            />
+            <StaticImage
+              src="../images/renders/carousel4.png"
+              alt="Device image."
+              placeholder="tracedSVG"
+              style={{
+                height: "auto",
+                width: "90%",
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+              imgStyle={{ objectFit: "contain" }}
+            />
+            <StaticImage
+              src="../images/renders/carousel5.png"
+              alt="Device image."
+              placeholder="tracedSVG"
+              style={{
+                height: "auto",
+                width: "90%",
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+              imgStyle={{ objectFit: "contain" }}
             />
           </StyledSlider>
         </SliderWrapper>
