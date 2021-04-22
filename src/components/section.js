@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   background: ${(props) => props.theme.colors.background};
+  overflow: hidden;
 `;
 
 const Section = ({ id, children }) => {

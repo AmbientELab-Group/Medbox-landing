@@ -2,62 +2,67 @@
   {
     "members": [
       {
-        "name": "Michal Okrasa",
-        "role": "Fullstack Developer",
-        "photo": "./images/Placeholder.png"
-      },
-      {
-        "name": "Janek Lewandoski",
-        "role": "Frontend Developer",
-        "photo": "./images/Placeholder2.png"
-      },
-      {
-        "name": "Natalia Bartłomiejczyk",
-        "role": "UI Design",
-        "photo": "./images/Placeholder2.png"
-      },
-      {
         "name": "Adam Lewczuk",
-        "role": "Mechanical Design",
-        "photo": "./images/Placeholder2.png"
+        "role": "Industrial Designer",
+        "photo": "./images/Adam.png"
       },
       {
         "name": "Krzysztof Adamkiewicz",
-        "role": "Electronics Developer",
-        "photo": "./images/Placeholder2.png"
+        "role": "Electronics & Embedded Developer",
+        "photo": "./images/Placeholder.png"
+      },
+      {
+        "name": "Michal Okrasa",
+        "role": "Fullstack Developer",
+        "photo": "./images/Michal.png"
+      },
+      {
+        "name": "Natalia Bartłomiejczyk",
+        "role": "UI/UX Designer",
+        "photo": "./images/Natalia.png"
+      },
+      {
+        "name": "Jakub Drobiński",
+        "role": "Documentation Engineer",
+        "photo": "./images/Jakub.png"
+      },
+      {
+        "name": "Jan Lewandoski",
+        "role": "Frontend Developer",
+        "photo": "./images/Jan.png"
       }
     ]
   },
   {
     "members": [
       {
-        "name": "Adam Lewczuk",
-        "role": "Mechanical Design",
-        "photo": "./images/Placeholder2.png"
+        "name": "Jakub Cytrowski",
+        "role": "Devops Engineer",
+        "photo": "./images/Cytryn.png"
       },
       {
-        "name": "Krzysztof Adamkiewicz",
-        "role": "Electronics Developer",
-        "photo": "./images/Placeholder2.png"
+        "name": "Marcel Bednarczyk",
+        "role": "Backend Developer",
+        "photo": "./images/Marcel.png"
       },
       {
-        "name": "Michal Okrasa",
-        "role": "Fullstack Developer",
-        "photo": "./images/Placeholder.png"
+        "name": "Mateusz Juszczykowski",
+        "role": "Backend Developer",
+        "photo": "./images/Mateusz.png"
       },
       {
-        "name": "Janek Lewandoski",
-        "role": "Frontend Developer",
-        "photo": "./images/Placeholder2.png"
+        "name": "Maciej Dębiec",
+        "role": "Backend Developer",
+        "photo": "./images/Maciej.png"
       },
       {
-        "name": "Michal Okrasa",
-        "role": "Fullstack Developer",
-        "photo": "./images/Placeholder.png"
+        "name": "Robert Kanimba",
+        "role": "Backend Developer",
+        "photo": "./images/Robert.png"
       },
       {
-        "name": "Janek Lewandoski",
-        "role": "Frontend Developer",
+        "name": "Bernard Szeliga",
+        "role": "Embedded Developer",
         "photo": "./images/Placeholder2.png"
       }
     ]
