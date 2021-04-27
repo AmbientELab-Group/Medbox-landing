@@ -8,14 +8,14 @@ import { useStaticQuery, graphql } from "gatsby";
 import Slider from "../components/slider";
 
 const SectionLayout = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
 `;
 

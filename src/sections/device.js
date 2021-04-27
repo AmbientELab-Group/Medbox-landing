@@ -10,7 +10,7 @@ import HomeCircleImg from "../assets/home-circle.svg";
 import OutlineLinkButton from "../components/outlineLinkButton";
 
 const SectionLayout = styled.div`
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,8 +30,8 @@ const TextWrapper = styled.div`
   padding: 0 1rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding: 0 4rem;
-    flex: 0.3;
+    padding-left: 4rem;
+    flex: 0.4;
     align-self: start;
   }
 `;
@@ -51,7 +51,7 @@ const SliderWrapper = styled.div`
   overflow: hidden;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    flex: 0.7;
+    flex: 0.6;
   }
 `;
 

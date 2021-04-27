@@ -6,15 +6,17 @@ i18next.use(initReactI18next).init({
   resources: {
     en: {
       translations: require("../locales/en/translations.json"),
+      contact: require("../locales/en/contact.json"),
     },
     pl: {
       translations: require("../locales/pl/translations.json"),
+      contact: require("../locales/pl/contact.json"),
     },
   },
-  ns: ["translations"], // namespace - name of the file with translations
+  ns: ["translations", "contact"], // namespace - name of the file with translations
   defaultNS: "translations",
   returnObjects: true,
-  debug: false,
+  debug: true,
   interpolation: {
     escapeValue: false,
   },
