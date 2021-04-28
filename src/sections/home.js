@@ -11,11 +11,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import HomeCircleImg from "../assets/home-circle.svg";
 
 const SectionLayout = styled.div`
-  height: 100%;
-  padding-top: 4rem;
+  height: calc(100vh - 6rem);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 7fr 3fr;
+  grid-template-columns: 5fr 5fr;
+  grid-template-rows: auto 6fr 4fr;
   padding-left: 1rem;
 
   grid-template-areas:
@@ -25,7 +24,6 @@ const SectionLayout = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     grid-template-rows: auto 9fr 1fr;
-    padding-top: 7rem;
     padding-left: 4rem;
     grid-template-areas:
       "title image"
@@ -38,10 +36,6 @@ const TitleWrapper = styled.div`
   grid-area: title;
   margin: 3rem 0;
   padding-right: 1rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding-right: 4rem;
-  }
 `;
 
 const DescriptionWrapper = styled.div`

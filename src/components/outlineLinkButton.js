@@ -12,14 +12,14 @@ const Wrapper = styled(motion.a)`
   border-radius: 0.8em;
   width: fit-content;
   padding: 0.3em 1.3em;
-  font-weight: bold;
+  font-weight: 600;
   color: ${({ theme }) => theme.colors.fontPrimary};
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
   }
 `;
 

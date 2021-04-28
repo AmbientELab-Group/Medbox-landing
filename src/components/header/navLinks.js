@@ -7,6 +7,7 @@ const LinksContainer = styled.ul`
   display: flex;
   flex-direction: ${({ $direction }) => $direction};
   flex-basis: 50%;
+  max-width: 1100px;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
@@ -28,8 +29,9 @@ const NavLinkItem = styled.li`
     color: ${({ theme }) => theme.colors.fontPrimary};
     height: fit-content;
     margin: 0 0.5em;
-    font-weight: 900;
+    font-weight: 600;
     white-space: nowrap;
+    font-size: 1.5rem;
   }
   span {
     height: 3px;

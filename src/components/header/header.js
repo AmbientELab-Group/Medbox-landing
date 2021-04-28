@@ -49,10 +49,25 @@ const StyledNavLinks = styled(NavLinks)`
 const Logo = styled.div`
   display: flex;
   align-items: center;
+  font-size: 1rem;
+
   span {
-    font-size: ${({ theme }) => theme.typography.fontLarge};
-    font-weight: bold;
+    font-size: 1em;
     color: ${({ theme }) => theme.colors.fontSecondary};
+  }
+
+  svg {
+    width: 2em;
+    height: 2em;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 2.5rem;
   }
 `;
 
@@ -61,6 +76,7 @@ const StyledOutlineButton = styled(OutlineLinkButton)`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: block;
+    margin-right: 0.5rem
   }
 `;
 
@@ -96,7 +112,7 @@ const Header = () => {
         handleLinkClick={handleLinkClick}
         direction="row"
       />
-      <StyledOutlineButton>{t("signIn")}</StyledOutlineButton>
+      <StyledOutlineButton href={process.env.GATSBY_WEBAPP_URL}>{t("signIn")}</StyledOutlineButton>
       <SideNav
         links={links}
         selectedLink={selectedLink}

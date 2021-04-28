@@ -7,6 +7,7 @@ import Title from "../components/typography/title";
 import ColorAccent from "../components/typography/colorAccent";
 import LinkButton from "../components/linkButton";
 import { useTranslation } from "react-i18next";
+import { navigate } from "gatsby";
 
 const SectionLayout = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const SectionLayout = styled.div`
   text-align: center;
   flex-direction: column;
   position: relative;
-  height: 100%;
+  height: calc(100vh - 6rem);
 `;
 
 const ButtonWrapper = styled.div`
@@ -57,7 +58,11 @@ const ContactSection = ({ id }) => {
           {t("sections.contact.title")[2]}
         </Title>
         <ButtonWrapper>
-          <LinkButton whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <LinkButton
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            clickHandler={() => navigate("/contact")}
+          >
             {t("sections.contact.buttons.getInTouch")}
           </LinkButton>
         </ButtonWrapper>

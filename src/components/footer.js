@@ -20,40 +20,69 @@ const FooterWrapper = styled.footer`
 
 const FooterNavList = styled.ul`
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
-  li {
-    flex: 1;
-    padding: 0.5rem;
-    white-space: nowrap;
-  }
+  flex: 2;
+  max-width: 1100px;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    li {
-      padding: 0rem 3rem !important;
-    }
+   li {
+    padding: 0.5rem;
   }
 `;
 
 const FooterLink = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.fontSecondary};
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 0.75rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 1.25rem;
+  }
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
+  font-size: 1rem;
+
+  svg {
+    width: 2em;
+    height: 2em;
+  }
+
   span {
-    font-size: ${({ theme }) => theme.typography.fontLarge};
-    font-weight: bold;
+    font-size: 1em;
     color: ${({ theme }) => theme.colors.fontSecondary};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    span {
+      font-size: 1.25em;
+    }
+
+    svg {
+      width: 2.5em;
+      height: 2.5em;
+    }
   }
 `;
 
-const Spacer = styled.span`
-  flex: 1 1 auto;
+const Credits = styled.p`
+  color: ${({ theme }) => theme.colors.fontSecondary};
+  font-size: 0.625rem;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    font-size: 0.875rem;
+  }
 `;
 
 const Footer = () => {
@@ -65,7 +94,6 @@ const Footer = () => {
         <LogoImg />
         <span>Ambient</span>
       </Logo>
-      <Spacer />
       <FooterNavList>
         {links?.map((link, i) => (
           <li key={i}>
@@ -75,7 +103,11 @@ const Footer = () => {
           </li>
         ))}
       </FooterNavList>
-      <Spacer />
+      <Credits>
+        Icons made by{" "}
+        <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from{" "}
+        <a href="http://www.flaticon.com/">www.flaticon.com</a>.
+      </Credits>
     </FooterWrapper>
   );
 };

@@ -5,15 +5,14 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 const MemberWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: fit-content;
-  margin: 0.5rem;
   width: 40%;
   height: 30%;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 25%;
+    width: 30%;
     height: 50%;
   }
 `;
@@ -41,6 +40,9 @@ const Role = styled.p`
 
 const GatsbyImageStyled = styled(GatsbyImage)`
   width: 80%;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     width: 50%;
@@ -50,7 +52,11 @@ const GatsbyImageStyled = styled(GatsbyImage)`
 const TeamMember = ({ name, role, photo, photoAlt }) => {
   return (
     <MemberWrapper>
-      <GatsbyImageStyled image={getImage(photo)} alt={photoAlt} />
+      <GatsbyImageStyled
+        image={getImage(photo)}
+        alt={photoAlt}
+        imgStyle={{ objectFit: "contain" }}
+      />
       <Name>{name}</Name>
       <Role>{role}</Role>
     </MemberWrapper>
