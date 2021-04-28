@@ -75,7 +75,7 @@ const NotFoundPage = () => {
     >
       <GlobalStyle />
       <StaticImage
-        src="../images/kopara.jpg"
+        src="../images/404.jpg"
         alt="Device image."
         placeholder="tracedSVG"
         style={{ height: "100vh" }}

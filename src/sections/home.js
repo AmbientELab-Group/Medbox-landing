@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "../components/section";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import Title from "../components/typography/title";
 import ColorAccent from "../components/typography/colorAccent";
 import Text from "../components/typography/text";
-import LinkButton from "../components/linkButton";
+import PrimaryLinkButton from "../components/linkButton";
 import DownIcon from "../components/downIcon";
 import { StaticImage } from "gatsby-plugin-image";
 import HomeCircleImg from "../assets/home-circle.svg";
@@ -123,13 +123,13 @@ const HomeSection = ({ id }) => {
         <DescriptionWrapper>
           <Text>{t("sections.home.description")}</Text>
           <ButtonWrapper>
-            <LinkButton
+            <PrimaryLinkButton
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               href={process.env.GATSBY_WEBAPP_URL}
             >
               {t("sections.home.button")}
-            </LinkButton>
+            </PrimaryLinkButton>
           </ButtonWrapper>
         </DescriptionWrapper>
         <IconWrapper>

@@ -1,12 +1,11 @@
-import React from "react";
-import { motion } from "framer-motion";
 import styled from "styled-components";
+import LinkButtonBase from "./linkButtonBase";
 
-const Wrapper = styled(motion.a)`
+const OutlineLinkButton = styled(LinkButtonBase)`
   display: inline-block;
-  border: ${({ theme, $thick }) =>
+  border: ${({ theme, thick }) =>
     `solid ${theme.colors.accent} ${
-      $thick ? theme.borders.regular : theme.borders.small
+      thick ? theme.borders.regular : theme.borders.small
     }`};
   font-size: 0.75rem;
   border-radius: 0.8em;
@@ -22,26 +21,5 @@ const Wrapper = styled(motion.a)`
     font-size: 1.5rem;
   }
 `;
-
-const OutlineLinkButton = ({
-  children,
-  className,
-  href,
-  clickHandler,
-  thick,
-}) => {
-  return (
-    <Wrapper
-      className={className}
-      onClick={clickHandler}
-      $thick={thick}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      href={href}
-    >
-      {children}
-    </Wrapper>
-  );
-};
 
 export default OutlineLinkButton;

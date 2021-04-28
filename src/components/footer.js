@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 import styled from "styled-components";
 import LogoImg from "../assets/logo.svg";
 import { links } from "../components/header/header";
@@ -27,7 +27,7 @@ const FooterNavList = styled.ul`
   flex: 2;
   max-width: 1100px;
 
-   li {
+  li {
     padding: 0.5rem;
   }
 `;
@@ -104,9 +104,14 @@ const Footer = () => {
         ))}
       </FooterNavList>
       <Credits>
-        Icons made by{" "}
-        <a href="https://www.flaticon.com/authors/freepik">Freepik</a> from{" "}
-        <a href="http://www.flaticon.com/">www.flaticon.com</a>.
+        <Trans
+          i18nKey="iconCredits"
+          defaults="Icons made by <author>Freepik</author> from <site>www.flaticon.com</site>."
+          components={{
+            author: <a href="https://www.flaticon.com/authors/freepik">Freepik</a>,
+            site: <a href="http://www.flaticon.com/">www.flaticon.com</a>,
+          }}
+        />
       </Credits>
     </FooterWrapper>
   );

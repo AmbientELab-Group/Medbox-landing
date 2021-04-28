@@ -1,12 +1,13 @@
 import React from "react";
 import Layout from "../components/layout";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import styled from "styled-components";
 import Title from "../components/typography/title";
 import Text from "../components/typography/text";
 import AddressIcon from "../assets/addressIcon.svg";
 import MailIcon from "../assets/mailIcon.svg";
 import WebsiteIcon from "../assets/websiteIcon.svg";
+import { graphql } from "gatsby";
 
 const PageContainer = styled.div`
   display: flex;
@@ -107,3 +108,17 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+export const query = graphql`
+  query($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

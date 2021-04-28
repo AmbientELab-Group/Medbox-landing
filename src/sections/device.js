@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "../components/section";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import Title from "../components/typography/title";
 import Text from "../components/typography/text";
 import Slider from "../components/slider";

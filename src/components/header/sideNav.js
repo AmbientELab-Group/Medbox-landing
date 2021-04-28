@@ -5,7 +5,7 @@ import NavLinks from "./navLinks";
 import ClickAway from "./clickAway";
 import { AnimatePresence, motion } from "framer-motion";
 import OutlineLinkButton from "../outlineLinkButton";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const NavContainer = styled(motion.div)`
   height: 100vh;
