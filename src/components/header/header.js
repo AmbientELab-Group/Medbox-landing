@@ -4,7 +4,7 @@ import LogoImg from "../../assets/logo.svg";
 import OutlineLinkButton from "../outlineLinkButton";
 import NavLinks from "./navLinks";
 import SideNav from "./sideNav";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 export const links = [
   {
@@ -76,7 +76,7 @@ const StyledOutlineButton = styled(OutlineLinkButton)`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: block;
-    margin-right: 0.5rem
+    margin-right: 0.5rem;
   }
 `;
 
@@ -112,7 +112,9 @@ const Header = () => {
         handleLinkClick={handleLinkClick}
         direction="row"
       />
-      <StyledOutlineButton href={process.env.GATSBY_WEBAPP_URL}>{t("signIn")}</StyledOutlineButton>
+      <StyledOutlineButton href={process.env.GATSBY_WEBAPP_URL}>
+        {t("signIn")}
+      </StyledOutlineButton>
       <SideNav
         links={links}
         selectedLink={selectedLink}

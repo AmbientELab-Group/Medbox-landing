@@ -5,9 +5,8 @@ import CircleTopLeftImg from "../assets/contact-circle-top-left.svg";
 import CircleBottomRightImg from "../assets/contact-circle-bottom-right.svg";
 import Title from "../components/typography/title";
 import ColorAccent from "../components/typography/colorAccent";
-import LinkButton from "../components/linkButton";
-import { useTranslation } from "react-i18next";
-import { navigate } from "gatsby";
+import PrimaryLinkButton from "../components/linkButton";
+import { useI18next } from "gatsby-plugin-react-i18next";
 
 const SectionLayout = styled.div`
   display: flex;
@@ -46,7 +45,7 @@ const StyledCircleBottomRight = styled(CircleBottomRightImg)`
 `;
 
 const ContactSection = ({ id }) => {
-  const { t } = useTranslation();
+  const { navigate, t } = useI18next();
 
   return (
     <Section id={id}>
@@ -58,13 +57,14 @@ const ContactSection = ({ id }) => {
           {t("sections.contact.title")[2]}
         </Title>
         <ButtonWrapper>
-          <LinkButton
+          <PrimaryLinkButton
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             clickHandler={() => navigate("/contact")}
+            href="/contact"
           >
             {t("sections.contact.buttons.getInTouch")}
-          </LinkButton>
+          </PrimaryLinkButton>
         </ButtonWrapper>
         <StyledCircleBottomRight />
       </SectionLayout>

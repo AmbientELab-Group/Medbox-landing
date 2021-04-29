@@ -1,8 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import LinkButtonBase from "./linkButtonBase";
 
-const Wrapper = styled(motion.a)`
+const PrimaryLinkButton = styled(LinkButtonBase)`
   display: inline-block;
   font-size: 0.75rem;
   font-weight: bold;
@@ -24,18 +23,4 @@ const Wrapper = styled(motion.a)`
   }
 `;
 
-const LinkButton = ({ children, className, href, clickHandler }) => {
-  return (
-    <Wrapper
-      className={className}
-      onClick={clickHandler}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      href={href}
-    >
-      {children}
-    </Wrapper>
-  );
-};
-
-export default LinkButton;
+export default PrimaryLinkButton;

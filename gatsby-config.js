@@ -11,9 +11,29 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `translations`,
+        name: `locale`,
         path: `${__dirname}/src/locales/`,
         ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`en`, `pl`],
+        defaultLanguage: `en`,
+        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
+        siteUrl: `https://ambient.ubicomp.pl/`,
+        // you can pass any i18next options
+        // pass following options to allow message content as a key
+        i18nextOptions: {
+          ns: ["translation", "contact"],
+          defaultNS: "translation",
+          returnObjects: true,
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          }
+        },
       },
     },
     {
