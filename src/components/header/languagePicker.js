@@ -18,10 +18,10 @@ const LanguageItem = styled.li`
   }
 `;
 
-const LanguagePicker = () => {
+const LanguagePicker = ({ className }) => {
   const { languages, originalPath, language } = useI18next();
   return (
-    <LanguageList>
+    <LanguageList className={className}>
       {languages.map((lng) => (
         <LanguageItem key={lng} $active={language === lng}>
           <Link to={originalPath} language={lng}>

@@ -20,13 +20,17 @@ const NavContainer = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   max-width: fit-content;
-  ul {
+  ul:first-child {
     padding: 5rem 3rem;
-    padding-bottom: 0;
+    padding-bottom: 2rem;
     li {
       padding: 1rem 0;
     }
   }
+`;
+
+const LanguageChoice = styled(LanguagePicker)`
+  padding: 3rem 0;
 `;
 
 const SyledOutlineButton = styled(OutlineLinkButton)`
@@ -66,7 +70,7 @@ const SideNav = ({
                 onLinkClick={toggleSidenav}
               />
               <SyledOutlineButton>{t("signIn")}</SyledOutlineButton>
-              <LanguagePicker />
+              <LanguageChoice />
             </NavContainer>
             <ClickAway
               initial={{ opacity: 0 }}
