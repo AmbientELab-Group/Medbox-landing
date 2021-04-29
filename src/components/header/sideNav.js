@@ -6,6 +6,7 @@ import ClickAway from "./clickAway";
 import { AnimatePresence, motion } from "framer-motion";
 import OutlineLinkButton from "../outlineLinkButton";
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import LanguagePicker from "./languagePicker";
 
 const NavContainer = styled(motion.div)`
   height: 100vh;
@@ -21,7 +22,7 @@ const NavContainer = styled(motion.div)`
   max-width: fit-content;
   ul {
     padding: 5rem 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0;
     li {
       padding: 1rem 0;
     }
@@ -65,6 +66,7 @@ const SideNav = ({
                 onLinkClick={toggleSidenav}
               />
               <SyledOutlineButton>{t("signIn")}</SyledOutlineButton>
+              <LanguagePicker />
             </NavContainer>
             <ClickAway
               initial={{ opacity: 0 }}

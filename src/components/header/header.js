@@ -5,6 +5,7 @@ import OutlineLinkButton from "../outlineLinkButton";
 import NavLinks from "./navLinks";
 import SideNav from "./sideNav";
 import { useTranslation } from "gatsby-plugin-react-i18next";
+import LanguagePicker from "./languagePicker";
 
 export const links = [
   {
@@ -35,6 +36,13 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+  }
 `;
 
 const StyledNavLinks = styled(NavLinks)`
@@ -76,7 +84,17 @@ const StyledOutlineButton = styled(OutlineLinkButton)`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: block;
-    margin-right: 0.5rem;
+  }
+`;
+
+const LanguageBar = styled.div`
+  display: none;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 0.5rem 0;
   }
 `;
 
@@ -102,6 +120,9 @@ const Header = () => {
 
   return (
     <HeaderContainer>
+      <LanguageBar>
+        <LanguagePicker />
+      </LanguageBar>
       <Logo>
         <LogoImg />
         <span>Ambient</span>
