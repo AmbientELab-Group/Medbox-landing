@@ -8,7 +8,7 @@ const LanguageList = styled.ul`
 `;
 
 const LanguageItem = styled.li`
-  margin: 0 0.5rem;
+  margin-left: 1rem;
   font-size: 1.25rem;
 
   a {
@@ -25,7 +25,7 @@ const LanguagePicker = ({ className }) => {
       {languages.map((lng) => (
         <LanguageItem key={lng} $active={language === lng}>
           <Link to={originalPath} language={lng}>
-            {lng}
+            {lng.toUpperCase()}
           </Link>
         </LanguageItem>
       ))}

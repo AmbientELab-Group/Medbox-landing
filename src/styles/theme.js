@@ -23,6 +23,7 @@ const Theme = {
     md: "768px",
     lg: "1024px",
   },
+  headerSize: "8rem",
 };
 
 export default Theme;

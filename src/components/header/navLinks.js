@@ -31,7 +31,7 @@ const NavLinkItem = styled.li`
     margin: 0 0.5em;
     font-weight: 600;
     white-space: nowrap;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   span {
     height: 3px;

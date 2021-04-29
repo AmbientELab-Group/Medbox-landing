@@ -75,7 +75,7 @@ const Logo = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 `;
 
@@ -84,6 +84,7 @@ const StyledOutlineButton = styled(OutlineLinkButton)`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     display: block;
+    font-size: 1.4rem;
   }
 `;
 
@@ -94,7 +95,7 @@ const LanguageBar = styled.div`
     display: flex;
     width: 100%;
     justify-content: flex-end;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
   }
 `;
 
