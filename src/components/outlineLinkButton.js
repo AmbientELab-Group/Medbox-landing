@@ -10,6 +10,7 @@ const OutlineLinkButton = styled(LinkButtonBase)`
   font-size: 0.75rem;
   border-radius: 0.8em;
   width: fit-content;
+  height: fit-content;
   padding: 0.3em 1.3em;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.fontPrimary};

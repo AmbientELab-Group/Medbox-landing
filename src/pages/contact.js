@@ -8,6 +8,7 @@ import AddressIcon from "../assets/addressIcon.svg";
 import MailIcon from "../assets/mailIcon.svg";
 import WebsiteIcon from "../assets/websiteIcon.svg";
 import { graphql } from "gatsby";
+import SEO from "../components/SEO";
 
 const PageContainer = styled.div`
   display: flex;
@@ -78,6 +79,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
+      <SEO />
       <PageContainer>
         <TextContainer>
           <Title>{t("title")}</Title>
@@ -110,8 +112,10 @@ const ContactPage = () => {
 export default ContactPage;
 
 export const query = graphql`
-  query($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query($language: String!, $ns: String!) {
+    locales: allLocale(
+      filter: { language: { eq: $language }, ns: { in: [$ns, "common"] } }
+    ) {
       edges {
         node {
           ns

@@ -1,90 +1,119 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import styled, { ThemeProvider } from "styled-components";
+import { graphql, navigate } from "gatsby";
+import LinkButton from "../components/linkButton";
+import OutlineLinkButton from "../components/outlineLinkButton";
+import theme from "../styles/theme";
+import { useTranslation } from "react-i18next";
+import Title from "../components/typography/title";
+import Text from "../components/typography/text";
 import GlobalStyle from "../styles/globalCss";
-import styled from "styled-components";
+import CircleDecor from "../assets/contact-circle-bottom-right.svg";
+import LeftCircleDecor from "../assets/contact-circle-top-left.svg";
+import SEO from "../components/SEO";
 
-// // styles
-// const pageStyles = {
-//   color: "#232129",
-//   padding: "96px",
-//   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-// };
-// const headingStyles = {
-//   marginTop: 0,
-//   marginBottom: 64,
-//   maxWidth: 320,
-// };
+const PageWrapper = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  padding: 2rem 1rem;
+`;
 
-// const paragraphStyles = {
-//   marginBottom: 48,
-// };
-// const codeStyles = {
-//   color: "#8A6534",
-//   padding: 4,
-//   backgroundColor: "#FFF4DB",
-//   fontSize: "1.25rem",
-//   borderRadius: 4,
-// };
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 
-const TextStyled = styled.div`
-  left: 20%;
-  top: 20%;
-  position: absolute;
-  font: bold 80px Sans-Serif;
-  color: pink;
-  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5,
-    -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5,
-    -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5,
-    -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
-
-  @media (max-width: 768px) {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    width: 80%;
   }
 `;
 
-// markup
+const ButtonContainer = styled.div`
+  display: flex;
+  margin: 3rem 0;
+  width: 100%;
+
+  & > * {
+    margin-right: 1rem;
+  }
+`;
+
+const StyledTitle = styled(Title)`
+  margin: 1em 0;
+  width: 100%;
+`;
+
+const StyledText = styled(Text)`
+  width: 100%;
+`;
+
+const Circle = styled(CircleDecor)`
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: auto;
+  height: 50%;
+  max-height: 100%;
+  max-width: 70%;
+  z-index: -10;
+  opacity: 0.3;
+`;
+
+const LeftCircle = styled(LeftCircleDecor)`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: 50%;
+  max-height: 100%;
+  max-width: 70%;
+  z-index: -10;
+  opacity: 0.3;
+`;
+
 const NotFoundPage = () => {
+  const { t } = useTranslation("404");
+
   return (
-    // <main style={pageStyles}>
-    //   <title>Not found</title>
-    //   <h1 style={headingStyles}>Page not found</h1>
-    //   <p style={paragraphStyles}>
-    //     Sorry{" "}
-    //     <span role="img" aria-label="Pensive emoji">
-    //       😔
-    //     </span>{" "}
-    //     we couldn’t find what you were looking for.
-    //     <br />
-    //     {process.env.NODE_ENV === "development" ? (
-    //       <>
-    //         <br />
-    //         Try creating a page in <code style={codeStyles}>src/pages/</code>.
-    //         <br />
-    //       </>
-    //     ) : null}
-    //     <br />
-    //     <Link to="/">Go home</Link>.
-    //   </p>
-    // </main>
-    <div
-      style={{
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <StaticImage
-        src="../images/404.jpg"
-        alt="Device image."
-        placeholder="tracedSVG"
-        style={{ height: "100vh" }}
-        imgStyle={{ objectFit: "cover" }}
-        layout="fullWidth"
-      />
-      <TextStyled>Are you lost bbgirl???</TextStyled>
-    </div>
+      <SEO />
+      <Circle />
+      <LeftCircle />
+      <PageWrapper>
+        <Content>
+          <StyledTitle>{t("title")}</StyledTitle>
+          <StyledText>{t("description")}</StyledText>
+          <ButtonContainer>
+            <LinkButton clickHandler={() => navigate(-1)}>
+              {t("back")}
+            </LinkButton>
+            <OutlineLinkButton href="/">{t("home")}</OutlineLinkButton>
+          </ButtonContainer>
+        </Content>
+      </PageWrapper>
+    </ThemeProvider>
   );
 };
 
 export default NotFoundPage;
+
+export const query = graphql`
+  query($language: String!, $ns: String!) {
+    locales: allLocale(
+      filter: { language: { eq: $language }, ns: { in: [$ns, "common"] } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

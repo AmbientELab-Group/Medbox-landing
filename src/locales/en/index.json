@@ -1,12 +1,5 @@
 {
-  "links": {
-    "home": "Home",
-    "aboutUs": "About us",
-    "project": "Project",
-    "device": "Device",
-    "contact": "Contact"
-  },
-  "signIn": "Sign In",
+  "pageTitle": "Home",
   "sections": {
     "home": {
       "title": ["The ultimate solution for managing medicines", "."],
@@ -28,6 +21,5 @@
         "getInTouch": "Get in touch"
       }
     }
-  },
-  "iconCredits": "Icons made by <author>Freepik</author> from <site>www.flaticon.com</site>."
+  }
 }

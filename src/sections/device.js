@@ -88,7 +88,7 @@ const DeviceSection = ({ id }) => {
             <StaticImage
               src="../images/renders/carousel1.png"
               alt="Device image."
-              placeholder="tracedSVG"
+              placeholder="blurred"
               style={{
                 height: "auto",
                 width: "90%",
@@ -100,7 +100,7 @@ const DeviceSection = ({ id }) => {
             <StaticImage
               src="../images/renders/carousel2.png"
               alt="Device image."
-              placeholder="tracedSVG"
+              placeholder="blurred"
               style={{
                 height: "auto",
                 width: "90%",
@@ -112,7 +112,7 @@ const DeviceSection = ({ id }) => {
             <StaticImage
               src="../images/renders/carousel3.png"
               alt="Device image."
-              placeholder="tracedSVG"
+              placeholder="blurred"
               style={{
                 height: "auto",
                 width: "90%",
@@ -122,7 +122,7 @@ const DeviceSection = ({ id }) => {
             <StaticImage
               src="../images/renders/carousel4.png"
               alt="Device image."
-              placeholder="tracedSVG"
+              placeholder="blurred"
               style={{
                 height: "auto",
                 width: "90%",
@@ -134,7 +134,7 @@ const DeviceSection = ({ id }) => {
             <StaticImage
               src="../images/renders/carousel5.png"
               alt="Device image."
-              placeholder="tracedSVG"
+              placeholder="blurred"
               style={{
                 height: "auto",
                 width: "90%",

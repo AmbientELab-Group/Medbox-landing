@@ -1,12 +1,5 @@
 {
-  "links": {
-    "home": "Strona główna",
-    "aboutUs": "O nas",
-    "project": "Projekt",
-    "device": "Urządzenie",
-    "contact": "Kontakt"
-  },
-  "signIn": "Zaloguj się",
+  "pageTitle": "Strona główna",
   "sections": {
     "home": {
       "title": ["Bezkompromisowe rozwiązanie do zarządzania lekami", "."],
@@ -28,6 +21,5 @@
         "getInTouch": "Skontaktuj się"
       }
     }
-  },
-  "iconCredits": "Ikony autorstwa <author>Freepik</author> z <site>www.flaticon.com</site>."
+  }
 }

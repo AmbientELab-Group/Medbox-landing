@@ -27,8 +27,8 @@ module.exports = {
         // you can pass any i18next options
         // pass following options to allow message content as a key
         i18nextOptions: {
-          ns: ["translation", "contact"],
-          defaultNS: "translation",
+          // debug: "true",
+          defaultNS: "common",
           returnObjects: true,
           interpolation: {
             escapeValue: false, // not needed for react as it escapes by default

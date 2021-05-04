@@ -4,25 +4,25 @@ import LogoImg from "../../assets/logo.svg";
 import OutlineLinkButton from "../outlineLinkButton";
 import NavLinks from "./navLinks";
 import SideNav from "./sideNav";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useI18next } from "gatsby-plugin-react-i18next";
 import LanguagePicker from "./languagePicker";
 
 export const links = [
   {
     translation: "home",
-    href: "#home",
+    href: "/",
   },
   {
     translation: "aboutUs",
-    href: "#about",
+    href: "/about/",
   },
   {
     translation: "device",
-    href: "#device",
+    href: "/device/",
   },
   {
     translation: "contact",
-    href: "#contact",
+    href: "/contact/",
   },
 ];
 
@@ -100,9 +100,11 @@ const LanguageBar = styled.div`
 `;
 
 const Header = () => {
-  const [selectedLink, setSelectedLink] = useState(links[0]);
+  const { t, originalPath } = useI18next();
+  const [selectedLink, setSelectedLink] = useState(() =>
+    links.find((link) => link.href === originalPath)
+  );
   const [isSidenavOpen, setIsSidenavOpen] = useState(false);
-  const { t } = useTranslation();
 
   const handleLinkClick = (link) => {
     setSelectedLink(link);
