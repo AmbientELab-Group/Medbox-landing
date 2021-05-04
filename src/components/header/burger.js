@@ -13,7 +13,7 @@ const BurgerLine = styled.div`
 
 const BurgerContainer = styled.div`
   position: fixed;
-  top: 1em;
+  top: 0.5em;
   right: 1rem;
   width: 3rem;
   height: 3rem;

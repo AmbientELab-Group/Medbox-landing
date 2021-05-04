@@ -12,7 +12,7 @@ const SectionLayout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     padding: 2rem 4rem;
@@ -24,8 +24,16 @@ const MembersWrapper = styled.div`
   height: 100%;
   width: 100%;
   align-content: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+`;
+
+const StyledTitle = styled(Title)`
+  margin-bottom: 1rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const AboutSection = ({ id }) => {
@@ -54,7 +62,7 @@ const AboutSection = ({ id }) => {
   return (
     <Section id={id}>
       <SectionLayout>
-        <Title>{t("sections.about.title")}</Title>
+        <StyledTitle>{t("sections.about.title")}</StyledTitle>
         <Slider>
           {membersPages.map((page, idx) => (
             <MembersWrapper key={idx}>

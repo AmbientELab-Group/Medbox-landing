@@ -10,7 +10,11 @@ const Content = styled.main`
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: 5rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding-top: ${({ theme }) => theme.headerSize};
+  }
 `;
 
 const Root = styled.div`

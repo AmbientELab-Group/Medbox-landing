@@ -25,7 +25,7 @@ const FooterNavList = styled.ul`
   list-style: none;
   text-align: center;
   flex: 2;
-  max-width: 1100px;
+  max-width: 900px;
 
   li {
     padding: 0.5rem;
@@ -39,7 +39,7 @@ const FooterLink = styled.a`
   font-size: 0.75rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 `;
 
