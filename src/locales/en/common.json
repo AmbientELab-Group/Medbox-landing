@@ -1,0 +1,11 @@
+{
+  "links": {
+    "home": "Home",
+    "aboutUs": "About us",
+    "project": "Project",
+    "device": "Device",
+    "contact": "Contact"
+  },
+  "signIn": "Sign In",
+  "iconCredits": "Icons made by <author>Freepik</author> from <site>www.flaticon.com</site>."
+}

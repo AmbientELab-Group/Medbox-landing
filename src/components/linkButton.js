@@ -9,7 +9,8 @@ const PrimaryLinkButton = styled(LinkButtonBase)`
   outline: none;
   border-radius: 0.8em;
   width: fit-content;
-  padding: 0.75em 2.25em;
+  height: fit-content;
+  padding: calc(0.3em + 3px) calc(1.3em + 3px);
   color: ${({ theme }) => theme.colors.white};
   cursor: pointer;
   text-decoration: none;
