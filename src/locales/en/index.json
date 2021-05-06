@@ -1,0 +1,25 @@
+{
+  "pageTitle": "Home",
+  "sections": {
+    "home": {
+      "title": ["The ultimate solution for managing medicines", "."],
+      "description": "Smart medication dispenser with remote monitoring for doctors and caregivers.",
+      "button": "Go to app"
+    },
+    "about": {
+      "title": "Our team",
+      "alt": "Image of {{name}}"
+    },
+    "device": {
+      "title": "Prototype",
+      "description": "We designed our Smart Dispenser to help people manage multiple medications, assuring an easy and safe drug administration. It allows caretakers to monitor an elderly’s adherence to the treatment via our custom application. Our device provides many amazing features like notifications with LEDs and audio, a large display with the treatment adherence and effortlessly replaceable containers for pills.",
+      "button": "Learn more"
+    },
+    "contact": {
+      "title": ["Start your next treatment with ", "us", "."],
+      "buttons": {
+        "getInTouch": "Get in touch"
+      }
+    }
+  }
+}

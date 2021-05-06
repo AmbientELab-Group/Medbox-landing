@@ -1,25 +1,35 @@
 import React from "react";
 import { graphql } from "gatsby";
+import styled from "styled-components";
 import Layout from "../components/layout";
-import AboutSection from "../sections/about";
-import HomeSection from "../sections/home";
-import ContactSection from "../sections/contact";
-import DeviceSection from "../sections/device";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import SEO from "../components/SEO";
 
-const IndexPage = () => {
+const PageContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  flex-direction: column;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    padding: 4rem 4rem;
+    flex-direction: row;
+  }
+`;
+
+const AboutPage = () => {
+  const { t } = useTranslation("about");
+
   return (
     <Layout>
       <SEO />
-      <HomeSection id="home" />
-      <AboutSection id="about" />
-      <DeviceSection id="device" />
-      <ContactSection id="contact" />
+      <PageContainer></PageContainer>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default AboutPage;
 
 export const query = graphql`
   query($language: String!, $ns: String!) {
