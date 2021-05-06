@@ -22,6 +22,7 @@ const Name = styled.p`
   font-weight: bold;
   text-align: center;
   color: ${({ theme }) => theme.colors.fontPrimary};
+  margin-top: 1rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: ${({ theme }) => theme.typography.fontMedium};
