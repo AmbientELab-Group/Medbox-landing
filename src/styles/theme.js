@@ -5,6 +5,7 @@ const Theme = {
     accentLight: "#93f0f7",
     fontPrimary: "#3e3d3d",
     fontSecondary: "#647676",
+    disabled: "#b2bcbc",
     white: "#fff",
   },
   typography: {

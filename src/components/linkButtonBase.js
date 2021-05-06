@@ -1,7 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const LinkButtonBase = ({ children, className, href, clickHandler }) => {
+const LinkButtonBase = ({
+  children,
+  className,
+  href,
+  clickHandler,
+}) => {
   const handler = (e) => {
     if (clickHandler) {
       e.preventDefault();

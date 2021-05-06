@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import LinkButtonBase from "./linkButtonBase";
 
 const PrimaryLinkButton = styled(LinkButtonBase)`
@@ -18,6 +18,14 @@ const PrimaryLinkButton = styled(LinkButtonBase)`
   background: ${({ theme }) =>
     `linear-gradient(0deg, ${theme.colors.accent} 0%, ${theme.colors.accentLight} 100%)`};
   white-space: nowrap;
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      cursor: default;
+      background: ${({ theme }) => theme.colors.disabled};
+      pointer-events: none;
+    `}
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     font-size: ${({ theme }) => theme.typography.fontMedium};

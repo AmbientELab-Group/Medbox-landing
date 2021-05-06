@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Section from "../components/section";
-import { useTranslation } from "gatsby-plugin-react-i18next";
 import Title from "../components/typography/title";
 import Text from "../components/typography/text";
 import Slider from "../components/slider";
 import { StaticImage } from "gatsby-plugin-image";
+import { useI18next } from "gatsby-plugin-react-i18next";
 import HomeCircleImg from "../assets/home-circle.svg";
 import OutlineLinkButton from "../components/outlineLinkButton";
 
@@ -72,7 +72,7 @@ const StyledHomeCircle = styled(HomeCircleImg)`
 `;
 
 const DeviceSection = ({ id }) => {
-  const { t } = useTranslation();
+  const { navigate, t } = useI18next();
 
   return (
     <Section id={id}>
@@ -80,7 +80,9 @@ const DeviceSection = ({ id }) => {
         <TextWrapper>
           <StyledTitle>{t("sections.device.title")}</StyledTitle>
           <Text>{t("sections.device.description")}</Text>
-          <StyledButton>{t("sections.device.button")}</StyledButton>
+          <StyledButton clickHandler={() => navigate("/device")} href="/device">
+            {t("sections.device.button")}
+          </StyledButton>
         </TextWrapper>
         <SliderWrapper>
           <StyledHomeCircle />

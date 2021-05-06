@@ -47,7 +47,7 @@ const DescriptionWrapper = styled.div`
   min-width: min-content;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    width: 60%;
+    width: 80%;
   }
 `;
 
@@ -124,11 +124,7 @@ const HomeSection = ({ id }) => {
         <DescriptionWrapper>
           <Text>{t("sections.home.description")}</Text>
           <ButtonWrapper>
-            <PrimaryLinkButton
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              href={process.env.GATSBY_WEBAPP_URL}
-            >
+            <PrimaryLinkButton href={process.env.GATSBY_WEBAPP_URL}>
               {t("sections.home.button")}
             </PrimaryLinkButton>
           </ButtonWrapper>
