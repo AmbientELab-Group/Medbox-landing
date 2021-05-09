@@ -100,7 +100,7 @@ const LanguageBar = styled.div`
 `;
 
 const Header = () => {
-  const { t, originalPath } = useI18next();
+  const { t, originalPath, navigate } = useI18next();
   const [selectedLink, setSelectedLink] = useState(() =>
     links.find((link) => link.href === originalPath)
   );
@@ -109,14 +109,14 @@ const Header = () => {
   const handleLinkClick = (link) => {
     setSelectedLink(link);
     setTimeout(() => {
-      window.location.href = link.href;
+      navigate(link.href);
     }, 250);
   };
 
   const handleSidenavLinkClick = (link) => {
     setSelectedLink(link);
     setTimeout(() => {
-      window.location.href = link.href;
+      navigate(link.href);
       setIsSidenavOpen(false);
     }, 250);
   };
