@@ -21,7 +21,7 @@ module.exports = {
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: [`en`, `pl`],
-        defaultLanguage: `en`,
+        defaultLanguage: `pl`,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl: `https://ambient.ubicomp.pl/`,
         // you can pass any i18next options
