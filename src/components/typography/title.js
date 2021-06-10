@@ -5,7 +5,7 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.fontPrimary};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    font-size: ${({ theme }) => theme.typography.fontExtraLarge};
+    font-size: 3.125rem;
   }
 `;
 

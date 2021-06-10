@@ -109,7 +109,7 @@ const HomeSection = ({ id }) => {
         <ImageWrapper>
           <StyledHomeCircle />
           <StaticImage
-            src="../images/renders/Home.png"
+            src="../data/images/renders/Home.png"
             alt="Device image."
             placeholder="blurred"
             style={{
