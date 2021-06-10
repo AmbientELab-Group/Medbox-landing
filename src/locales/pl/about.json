@@ -1,0 +1,18 @@
+{
+  "pageTitle": "O nas",
+  "title": "O nas",
+  "introduction": {
+    "who": {
+      "title": "Kim jesteśmy",
+      "description": "Jesteśmy niezależnym zespołem składającym się z członków studenckiego koła naukowego UbiCOMP zajmującego się dyscypliną Human-Computer Interactions. W swoich szeregach mamy ambitnych i utalentowanych ludzi zajmujących się między innymi: user experience, tworzeniem oprogramowania, projektowaniem 3D i elektroniką."
+    },
+    "what": {
+      "title": "Co robimy",
+      "description": "Pasjonujemy się rozwojem nowych technologii w służbie człowieka. Nasze rozwiązania opierają się na badaniach naukowych i najnowszych odkryciach prezentowanych na międzynarodowych konferencjach HCI. Tworząc projekty skupiamy się na ich użyteczności oraz odczuciach użytkownika."
+    },
+    "how": {
+      "title": "O projekcie",
+      "description": "Problemem który zainspirował powstanie projektu było nieprzestrzeganie zaleceń lekarskich dotyczących przyjmowania leków przez pacjentów. Wraz z początkiem pandemii nasza codzienność przeszła w tryb zdalny, wizyty w przychodni zostały zastąpione przez konsultacje telefoniczne a opiekunowie nie mieli wglądu w stan zdrowia swoich podopiecznych. Zaprojektowane przez nas urządzenie oraz aplikacja mają ułatwić zdalny nadzór kuracji i regularne przyjmowanie leków. Wraz z rozwojem projektu dołączały do nas kolejne osoby wnosząc nową wiedzę i doświadczenie. Obecnie zespół składa się z ponad 10 członków i stale rośnie."
+    }
+  }
+}
