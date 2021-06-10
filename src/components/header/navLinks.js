@@ -1,6 +1,6 @@
 import { AnimateSharedLayout, motion } from "framer-motion";
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const LinksContainer = styled.ul`
@@ -17,7 +17,7 @@ const LinksContainer = styled.ul`
 const NavLinkItem = styled.li`
   display: flex;
   flex-direction: column;
-  padding: 0 0.2em;
+  margin: 0 0.5em;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent !important;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -28,7 +28,6 @@ const NavLinkItem = styled.li`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.fontPrimary};
     height: fit-content;
-    margin: 0 0.5em;
     font-weight: 600;
     white-space: nowrap;
     font-size: 1.4rem;
@@ -67,20 +66,20 @@ const NavLinks = ({
 };
 
 const NavLink = ({ isActive, onClick, children }) => {
+  const theme = useTheme();
+
   return (
     <NavLinkItem onClick={onClick}>
       <p>{children}</p>
       {isActive && (
-        <motion.span layoutId="underline" initial={false} transition={spring} />
+        <motion.span
+          layoutId="underline"
+          initial={false}
+          transition={theme.animations.spring}
+        />
       )}
     </NavLinkItem>
   );
 };
 
 export default NavLinks;
-
-const spring = {
-  type: "spring",
-  stiffness: 500,
-  damping: 30,
-};
