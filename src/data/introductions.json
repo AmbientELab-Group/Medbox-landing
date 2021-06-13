@@ -1,0 +1,17 @@
+[
+  {
+    "title": "introduction.who.title",
+    "description": "introduction.who.description",
+    "image": "./images/introduction/people.png"
+  },
+  {
+    "title": "introduction.what.title",
+    "description": "introduction.what.description",
+    "image": "./images/introduction/work.png"
+  },
+  {
+    "title": "introduction.how.title",
+    "description": "introduction.how.description",
+    "image": "./images/introduction/hand_pill.png"
+  }
+]

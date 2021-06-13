@@ -88,7 +88,7 @@ const DeviceSection = ({ id }) => {
           <StyledHomeCircle />
           <StyledSlider>
             <StaticImage
-              src="../images/renders/carousel1.png"
+              src="../data/images/renders/carousel1.png"
               alt="Device image."
               placeholder="blurred"
               style={{
@@ -100,7 +100,7 @@ const DeviceSection = ({ id }) => {
               imgStyle={{ objectFit: "contain" }}
             />
             <StaticImage
-              src="../images/renders/carousel2.png"
+              src="../data/images/renders/carousel2.png"
               alt="Device image."
               placeholder="blurred"
               style={{
@@ -112,7 +112,7 @@ const DeviceSection = ({ id }) => {
               imgStyle={{ objectFit: "contain" }}
             />
             <StaticImage
-              src="../images/renders/carousel3.png"
+              src="../data/images/renders/carousel3.png"
               alt="Device image."
               placeholder="blurred"
               style={{
@@ -122,7 +122,7 @@ const DeviceSection = ({ id }) => {
               imgStyle={{ objectFit: "contain" }}
             />
             <StaticImage
-              src="../images/renders/carousel4.png"
+              src="../data/images/renders/carousel4.png"
               alt="Device image."
               placeholder="blurred"
               style={{
@@ -134,7 +134,7 @@ const DeviceSection = ({ id }) => {
               imgStyle={{ objectFit: "contain" }}
             />
             <StaticImage
-              src="../images/renders/carousel5.png"
+              src="../data/images/renders/carousel5.png"
               alt="Device image."
               placeholder="blurred"
               style={{

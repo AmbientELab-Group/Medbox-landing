@@ -14,6 +14,14 @@ const GlobalStyle = createGlobalStyle`
   html {
     scroll-behavior: smooth;
     height: 100%;
+
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+
+    @media (min-width: 1300px) {
+      font-size: 16px;
+    }
   }
   body {
     font-family: 'Montserrat';

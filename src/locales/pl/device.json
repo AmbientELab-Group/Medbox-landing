@@ -1,3 +1,57 @@
 {
-  "pageTitle": "Urządzenie"
+  "pageTitle": "Urządzenie",
+  "title": "Urządzenie",
+  "introduction": "Ambient jest urządzeniem skierowanym do osób troszczących się o swoje zdrowie. Dzięki szeregowi funkcjonalności jakie oferuje, umożliwia on przestrzeganie systematycznego przyjmowania leków. Lekka i wytrzymała konstrukcja sprawia, że Ambient może być z łatwością transportowany. Mimo swoich niewielkich rozmiarów jest w stanie pomieścić zapas leków na miesiąc. Intuicyjny interfejs użytkownika oraz prosta obsługa pozwalają na komfortowe i efektywne zarządzanie kuracją. Dzięki aplikacji opiekunowie i lekarze mogą zdalnie ocenić postęp procesu leczenia.",
+  "maintanance": {
+    "tabTitle": "Prosta obsługa",
+    "features": {
+      "system": {
+        "title": "System modułowy",
+        "description": "Wszystkie Twoje leki w jednym miejscu, bez potrzeby wkładania każdego leku oddzielnie."
+      },
+      "loading": {
+        "title": "Szybkie uzupełnianie",
+        "description": "W kilka sekund zapakujesz leki, wystarczy wymienić szufladkę."
+      }
+    }
+  },
+  "monitoring": {
+    "tabTitle": "Pełna kontrola",
+    "features": {
+      "record": {
+        "title": "Historia branych leków",
+        "description": "Dzięki podświetlanemu panelowi masz wgląd w przyjęte leki. Szczegółowa historia leczenia jest również dostępna w aplikacji."
+      }
+    }
+  },
+  "management": {
+    "tabTitle": "Zarządzanie lekami",
+    "features": {
+      "reminders": {
+        "title": "Przypomnienia",
+        "description": "Dzięki wizualnym i dzwiękowym powiadomieniom nie musisz pamiętać o porach zażycia leków."
+      },
+      "system": {
+        "title": "System leków",
+        "description": "Wszystkie Twoje leki są uporządkowane i ulokowane w szufladkach urządzenia."
+      },
+      "urgent": {
+        "title": "Leki doraźne",
+        "description": "Szybki dostęp do leków również na nagłe potrzeby."
+      }
+    }
+  },
+  "style": {
+    "tabTitle": "Stylistyka",
+    "features": {
+      "size": {
+        "title": "Poręczny rozmiar",
+        "description": "Urządzenie można z łatwością przenieść w jednej ręce. Mimo swojego niewielkiego rozmiaru jest w stanie pomieścić domową apteczkę, dzięki swojej modularnej budowie."
+      },
+      "finish": {
+        "title": "Nowoczesny wygląd",
+        "description": "Minimalistyczna i estetyczna aparycja urządzenia pozwala mu na idealne wkomponowanie się w każde wnętrze."
+      }
+    }
+  }
 }

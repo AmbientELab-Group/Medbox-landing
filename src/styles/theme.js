@@ -24,7 +24,14 @@ const Theme = {
     md: "768px",
     lg: "1024px",
   },
-  headerSize: "8rem",
+  headerSize: "9rem",
+  animations: {
+    spring: {
+      type: "spring",
+      stiffness: 500,
+      damping: 30,
+    },
+  },
 };
 
 export default Theme;

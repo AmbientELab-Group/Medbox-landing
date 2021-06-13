@@ -37,11 +37,12 @@ const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  background: ${({ theme }) => theme.colors.background};
+  z-index: 100;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    padding: 0;
-    padding-left: 1rem;
-    padding-right: 1.5rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0 4rem 3rem 3.5rem;
   }
 `;
 

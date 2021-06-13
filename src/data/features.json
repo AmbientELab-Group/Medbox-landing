@@ -1,0 +1,58 @@
+[
+  {
+    "title": "maintanance.tabTitle",
+    "photo": "./images/features/maintanance.png",
+    "features": [
+      {
+        "title": "maintanance.features.system.title",
+        "description": "maintanance.features.system.description"
+      },
+      {
+        "title": "maintanance.features.loading.title",
+        "description": "maintanance.features.loading.description"
+      }
+    ]
+  },
+  {
+    "title": "monitoring.tabTitle",
+    "photo": "./images/features/monitoring.png",
+    "features": [
+      {
+        "title": "monitoring.features.record.title",
+        "description": "monitoring.features.record.description"
+      }
+    ]
+  },
+  {
+    "title": "management.tabTitle",
+    "photo": "./images/features/management.png",
+    "features": [
+      {
+        "title": "management.features.reminders.title",
+        "description": "management.features.reminders.description"
+      },
+      {
+        "title": "management.features.system.title",
+        "description": "management.features.system.description"
+      },
+      {
+        "title": "management.features.urgent.title",
+        "description": "management.features.urgent.description"
+      }
+    ]
+  },
+  {
+    "title": "style.tabTitle",
+    "photo": "./images/features/style.png",
+    "features": [
+      {
+        "title": "style.features.size.title",
+        "description": "style.features.size.description"
+      },
+      {
+        "title": "style.features.finish.title",
+        "description": "style.features.finish.description"
+      }
+    ]
+  }
+]
