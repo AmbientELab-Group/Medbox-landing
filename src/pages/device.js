@@ -25,6 +25,9 @@ const StyledText = styled(Text)`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     margin: 2rem 0;
+    column-count: 2;
+    column-gap: 4rem;
+    text-align: justify;
   }
 `;
 

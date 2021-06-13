@@ -1,5 +1,57 @@
 {
   "pageTitle": "Device",
   "title": "Device",
-  "introduction": "Tu by się przydał jakiś tekst wprodadzający do funkcjonalności np Nasz system ułatwia przestrzeganie systematycznego przyjmowania leków dzięki szeregowi funkcjonalności jakie oferuje."
+  "introduction": "Ambient is a device aimed at people who care about their health. The range of offered functionalities supports systematic medicine adherence. The simplicity and robust design allow transportation of Ambient with ease. Despite its small size, it can hold a monthly supply of medicines. The intuitive user interface and simple handling provide convenient and effective treatment management. Thanks to the web and mobile application, caregivers and doctors can remotely assess the progress of treatment.",
+  "maintanance": {
+    "tabTitle": "Easy Maintanance",
+    "features": {
+      "system": {
+        "title": "Modular design",
+        "description": "All of your medicines in one place, no need to put them in one by one."
+      },
+      "loading": {
+        "title": "Fast refill",
+        "description": "A few seconds is all you need to replace one of the containers."
+      }
+    }
+  },
+  "monitoring": {
+    "tabTitle": "Full Controll",
+    "features": {
+      "record": {
+        "title": "Adherence record",
+        "description": "Thanks to the LED panel, you can see your daily progress. There are more adherence details available in our application."
+      }
+    }
+  },
+  "management": {
+    "tabTitle": "Medicine Management",
+    "features": {
+      "reminders": {
+        "title": "Reminders",
+        "description": "Thanks to the audio-visual notifications on the box and in your app, there is no need to remember adherence time."
+      },
+      "system": {
+        "title": "Schedule",
+        "description": "Your medicines are neatly placed in the containers, ready to be issued at the appropriate time."
+      },
+      "urgent": {
+        "title": "Urgent access",
+        "description": "Fast access to chosen medicines in urgent situations."
+      }
+    }
+  },
+  "style": {
+    "tabTitle": "Design",
+    "features": {
+      "size": {
+        "title": "Handy size",
+        "description": "Small dimensions allow carrying this device in one hand. Despite its compact size, the box is capable of accomodating the average first aid kit, thanks to its modular design."
+      },
+      "finish": {
+        "title": "Modern finish",
+        "description": "Minimalistic and aesthetic appearance enables it to seamlessly blend into any interior."
+      }
+    }
+  }
 }

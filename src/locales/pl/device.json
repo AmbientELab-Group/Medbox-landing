@@ -1,12 +1,12 @@
 {
   "pageTitle": "Urządzenie",
   "title": "Urządzenie",
-  "introduction": "Tu by się przydał jakiś tekst wprodadzający do funkcjonalności np Nasz system ułatwia przestrzeganie systematycznego przyjmowania leków dzięki szeregowi funkcjonalności jakie oferuje.",
+  "introduction": "Ambient jest urządzeniem skierowanym do osób troszczących się o swoje zdrowie. Dzięki szeregowi funkcjonalności jakie oferuje, umożliwia on przestrzeganie systematycznego przyjmowania leków. Lekka i wytrzymała konstrukcja sprawia, że Ambient może być z łatwością transportowany. Mimo swoich niewielkich rozmiarów jest w stanie pomieścić zapas leków na miesiąc. Intuicyjny interfejs użytkownika oraz prosta obsługa pozwalają na komfortowe i efektywne zarządzanie kuracją. Dzięki aplikacji opiekunowie i lekarze mogą zdalnie ocenić postęp procesu leczenia.",
   "maintanance": {
     "tabTitle": "Prosta obsługa",
     "features": {
       "system": {
-        "title": "System kasetowy",
+        "title": "System modułowy",
         "description": "Wszystkie Twoje leki w jednym miejscu, bez potrzeby wkładania każdego leku oddzielnie."
       },
       "loading": {
@@ -16,7 +16,7 @@
     }
   },
   "monitoring": {
-    "tabTitle": "Monitorowanie",
+    "tabTitle": "Pełna kontrola",
     "features": {
       "record": {
         "title": "Historia branych leków",
