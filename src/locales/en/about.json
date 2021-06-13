@@ -1,4 +1,18 @@
 {
   "pageTitle": "About us",
-  "title": "About us"
+  "title": "About us",
+  "introduction": {
+    "who": {
+      "title": "Who we are",
+      "description": "We are an independent team originating from the UbiCOMP Student Research Club, primarily interested in Human-Computer Interactions. Within our ranks, we have ambitious and talented people working in the fields of User Experience, Software Development, 3D Modelling and Electronics."
+    },
+    "what": {
+      "title": "What we do",
+      "description": "We are passionate about developing new technologies to serve other people. Our solutions are based on scientific research and the latest discoveries presented at international HCI conferences. When creating projects, we focus on usability and user experience."
+    },
+    "how": {
+      "title": "About the project",
+      "description": "The problem that inspired the project was the lack of compliance with medication recommendations by patients. With the onset of the pandemic, our daily tasks went into remote mode. Phone consultations replaced visits to the clinics and caregivers became unable to freely access the health status of their patients. We designed a device and an app to facilitate remote monitoring of treatments and regular medication intake. As the project developed, more people joined us, bringing new knowledge and experience. Currently, the team consists of more than ten members and is constantly growing."
+    }
+  }
 }
