@@ -1,13 +1,13 @@
 {
   "pageTitle": "Device",
   "title": "Device",
-  "introduction": "Ambient is a device aimed at people who care about their health. The range of offered functionalities supports systematic medicine adherence. The simplicity and robust design allow transportation of Ambient with ease. Despite its small size, it can hold a monthly supply of medicines. The intuitive user interface and simple handling provide convenient and effective treatment management. Thanks to the web and mobile application, caregivers and doctors can remotely assess the progress of treatment.",
+  "introduction": "Ambient is a device aimed at people who care about their health. Its wide range of features supports systematic medicine adherence. The simplicity and robust design facilitate the transportation of Ambient with ease. Despite its small size, it can hold a monthly supply of medicines. The intuitive user interface and simple handling provide convenient and effective treatment management. Thanks to the web and mobile applications, caregivers and doctors can remotely assess the progress of treatment.",
   "maintanance": {
     "tabTitle": "Easy Maintanance",
     "features": {
       "system": {
         "title": "Modular design",
-        "description": "All of your medicines in one place, no need to put them in one by one."
+        "description": "All of your medicines are in one place, no need to put them in one by one."
       },
       "loading": {
         "title": "Fast refill",
@@ -16,7 +16,7 @@
     }
   },
   "monitoring": {
-    "tabTitle": "Full Controll",
+    "tabTitle": "Full Control",
     "features": {
       "record": {
         "title": "Adherence record",
@@ -29,7 +29,7 @@
     "features": {
       "reminders": {
         "title": "Reminders",
-        "description": "Thanks to the audio-visual notifications on the box and in your app, there is no need to remember adherence time."
+        "description": "Thanks to the audio-visual notifications on the device and in our app, there is no need to remember when to take medicines."
       },
       "system": {
         "title": "Schedule",
@@ -37,7 +37,7 @@
       },
       "urgent": {
         "title": "Urgent access",
-        "description": "Fast access to chosen medicines in urgent situations."
+        "description": "Fast access to select medicines in urgent situations."
       }
     }
   },
@@ -46,7 +46,7 @@
     "features": {
       "size": {
         "title": "Handy size",
-        "description": "Small dimensions allow carrying this device in one hand. Despite its compact size, the box is capable of accomodating the average first aid kit, thanks to its modular design."
+        "description": "Small dimensions allow carrying this device in one hand. Despite its compact size, the box is capable of accomodating an average home medicine cabinet, thanks to its modular design."
       },
       "finish": {
         "title": "Modern finish",

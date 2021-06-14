@@ -1,7 +1,7 @@
 {
   "pageTitle": "Urządzenie",
   "title": "Urządzenie",
-  "introduction": "Ambient jest urządzeniem skierowanym do osób troszczących się o swoje zdrowie. Dzięki szeregowi funkcjonalności jakie oferuje, umożliwia on przestrzeganie systematycznego przyjmowania leków. Lekka i wytrzymała konstrukcja sprawia, że Ambient może być z łatwością transportowany. Mimo swoich niewielkich rozmiarów jest w stanie pomieścić zapas leków na miesiąc. Intuicyjny interfejs użytkownika oraz prosta obsługa pozwalają na komfortowe i efektywne zarządzanie kuracją. Dzięki aplikacji opiekunowie i lekarze mogą zdalnie ocenić postęp procesu leczenia.",
+  "introduction": "Ambient jest urządzeniem skierowanym do osób troszczących się o swoje zdrowie. Dzięki szeregowi funkcjonalności jakie oferuje, umożliwia przestrzeganie systematycznego przyjmowania leków. Lekka i wytrzymała konstrukcja sprawiają, że Ambient może być z łatwością transportowany. Mimo swoich niewielkich rozmiarów jest w stanie pomieścić zapas leków na miesiąc. Intuicyjny interfejs użytkownika oraz prosta obsługa pozwalają na komfortowe i efektywne zarządzanie kuracją. Dzięki aplikacji opiekunowie i lekarze mogą zdalnie ocenić postępy w procesie leczenia.",
   "maintanance": {
     "tabTitle": "Prosta obsługa",
     "features": {
@@ -29,7 +29,7 @@
     "features": {
       "reminders": {
         "title": "Przypomnienia",
-        "description": "Dzięki wizualnym i dzwiękowym powiadomieniom nie musisz pamiętać o porach zażycia leków."
+        "description": "Dzięki wizualnym i dźwiękowym powiadomieniom nie musisz pamiętać o porach zażywania leków."
       },
       "system": {
         "title": "System leków",
@@ -46,7 +46,7 @@
     "features": {
       "size": {
         "title": "Poręczny rozmiar",
-        "description": "Urządzenie można z łatwością przenieść w jednej ręce. Mimo swojego niewielkiego rozmiaru jest w stanie pomieścić domową apteczkę, dzięki swojej modularnej budowie."
+        "description": "Urządzenie można z łatwością przenieść w jednej ręce. Mimo swojego niewielkiego rozmiaru, jest w stanie pomieścić domową apteczkę, dzięki swojej modularnej budowie."
       },
       "finish": {
         "title": "Nowoczesny wygląd",
