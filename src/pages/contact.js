@@ -90,7 +90,7 @@ const ContactPage = () => {
           </Contact>
           <Contact>
             <MailIcon />
-            <a href="mailto:contact@ubicomp.pl">contact@ubicomp.pl</a>
+            <a href="mailto:ambient@ubicomp.pl">ambient@ubicomp.pl</a>
           </Contact>
           <Contact>
             <WebsiteIcon />
